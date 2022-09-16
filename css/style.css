@@ -32,6 +32,7 @@ header h2 {
 	margin: 0;
 	text-align: center;
 	font-size: 1em;
+	font-family: 'Satoshi-Bold', sans-serif;
 }
 
 header {
@@ -176,7 +177,7 @@ span {
 	header h1 {
 		font-size: 2.2em;
 		padding-bottom: 0.2em;
-		font-weight: 5400;
+		/* font-weight: 5400; */
 		font-style: italic;
 		text-align: left;
 	}
