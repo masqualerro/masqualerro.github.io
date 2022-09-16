@@ -1,7 +1,7 @@
 @import url(css/satoshi.css);
 
 body {
-	font-family: 'Satoshi-Regular';
+	font-family: 'Satoshi-Regular', sans-serif;
 }
 
 header h1 {
