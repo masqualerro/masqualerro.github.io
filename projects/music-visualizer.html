@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Art Query</title>
+
+		<script src="https://kit.fontawesome.com/daafecce72.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" href="../css/projects.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Processing Music Visualizer</h1>
+			<nav>
+				<a href="../index.html">Home</a>
+				<a href="#">About Me</a>
+				<a href="https://www.linkedin.com/in/miguel-sedillo/">LinkedIn</a>
+				<a href="https://github.com/masqualerro">GitHub</a>
+				<a
+					href="mailto:&#115;&#101;&#100;&#105;&#108;&#108;&#111;&#109;&#105;&#103;&#117;&#101;&#108;&#046;&#100;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
+				>
+					Email
+				</a>
+			</nav>
+			<a class="siteLink" id="musicviz-link" href="https://github.com/masqualerro/music_visualizer_processing">
+				https://github.com/masqualerro/music_visualizer_processing
+			</a>
+		</header>
+		<main>
+			<article id="process" class="closed">
+				<h1 id="processToggle">
+					Process
+					<i id="processArrow" class="fa-solid fa-chevron-right"></i>
+				</h1>
+				<div id="processDrop" class="dropdown">
+					<section>
+						<h2>Initial Brainstorm</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/musicviz/musicviz_3.jpg" alt="" />
+							</div>
+							<div class="dropP">
+								<p>
+									This is my final project for DES 111 at UC Davis, a creative coding class for
+									designers using
+									<a href="https://processing.org/">processing</a>
+									[a graphical library and IDE using the Java language]. The assignment was open ended
+									and I was granted complete creative and conceptual control.
+									<br />
+									<br />
+									My initial brainstorm for this project was inspired by early 2000s iTunes music
+									visualizers. I remember loving to watch the animations on my family computer while I
+									listened to music as a child -- but I always felt frustrated that the visualizers
+									were not connected to the beat of the music.
+									<br />
+									<br />
+									For my project, I resolved to make a customizable music visualizer of my own that
+									would follow the bpm of the song at hand.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Initial UX/UI Design</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/musicviz/musicviz_4.jpg" alt="artquery_brainstorm_sketch" />
+								<img src="../images/process/musicviz/musicviz_1.png" alt="artquery_brainstorm_sketch" />
+							</div>
+							<div class="dropP">
+								<p>
+									Before the coding process, I sketched several UI concepts alongside some notes on
+									their accompanying UX features. From the beginning, I felt strongly that the user
+									must have customization control over the visualizer, and the visualizer animation
+									should be directly linked to the bpm of the song, effectively shifting and moving
+									with it.
+									<br />
+									<br />
+									I decided that the visualizer would consist of overlapping transparent shapes with
+									varying stroke colors, attached to different waveforms from the chosen song file.
+									<br />
+									<br />
+									The user would have the option to customize these shapes, and choose either
+									rectangles or ellipses. The user would also be able to choose the stroke color, from
+									various static colors or constantly shifting random colors for a rainbow strobelight
+									effect.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Rough Versions / Development</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<video autoplay loop muted playsinline>
+									<source src="../images/process/musicviz/musicviz_early.webm" />
+									<source src="../images/process/musicviz/musicviz_early.mp4" />
+								</video>
+								<img src="../images/process/musicviz/musicviz_7.png" alt="" />
+
+								<img src="../images/process/musicviz/musicviz_5.png" alt="" />
+							</div>
+							<div class="dropP">
+								<p>
+									The first version of the project was meant to develop the visualizer animation and
+									functionality, with a rough UI meant to brainstorm color schemes and develop a
+									feeling to work from.
+									<br />
+									<br />
+									I began by stacking several ellipses and tying their dimensions to the left and
+									right channels of the currently playing stereo audio track using the
+									<a href="https://code.compartmental.net/minim/">minim</a>
+									library. Each circle relied in a different manner on the audio channels, creating a
+									fluctuating, versatile, geometric effect. I also added a version of this using
+									rectangles instead of ellipses.
+									<br />
+									<br />
+									For the UI, I decided on a black background, to match early iTunes visualizers. I
+									chose basic color options (blue, red, yellow) and a rainbow option that would change
+									to a random color on each beat of the song. The type included in the rough version
+									was meant for my own personal reference during testing, and would later be
+									implemented into a UI for the user.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Meme</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/artquer_3.png" alt="artquery_brainstorm_sketch" />
+							</div>
+							<div class="dropP">
+								<p>Initial development was spent on creating:</p>
+								<ul>
+									<li>Drag and drop functionality</li>
+									<li>Click image to expand to overlay for closer look</li>
+									<li>User flow of website</li>
+									<li>Positional styling</li>
+								</ul>
+
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Curating Artwork</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/artquery_3.jpg" alt="artquery_brainstorm_sketch" />
+							</div>
+							<div class="dropP">
+								<ol>
+									<li>
+										Broke down hierarchical structure of quiz into 6 major art movements and
+										subsequent subgenres
+									</li>
+									<li>
+										Chose 10 pieces within each major movement that evenly spanned across its
+										respective subgenres
+									</li>
+									<li>
+										Chose “cover image” for each genre in the first step of the quiz in which the
+										user must choose their favorite piece out of 5 artworks
+									</li>
+									<li>
+										Created JSON file with data (artist, title, year, genre, imagery/subject etc.)
+										and Boolean attributes for each artwork (ex. Human = true, nature = false)
+										&#8211; [this data is incorporated into the final quiz output]
+									</li>
+								</ol>
+
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Quiz Output</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/artquery_4.jpg" alt="artquery_brainstorm_sketch" />
+							</div>
+							<div class="dropP">
+								<ul>
+									<li>
+										Wrote a paragraph corresponding to different genre / emotional combinations for
+										each major art movement making assumptions about the user &#8211; this would go
+										into “feeling” output
+									</li>
+									<li>
+										Created chart listing objective preferences (eg. Humans in nature, religious
+										imagery, etc.)
+									</li>
+									<li>
+										Extracted colors from user's favorite pieces to create personal, fluxtuating
+										“aura" and suggest colors they might like
+									</li>
+									<li>Listed favorite pieces from their quiz to encourage research</li>
+								</ul>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+			<article id="design" class="closed">
+				<h1 id="designToggle">
+					<i id="designArrow" class="fa-solid fa-chevron-left"></i>
+					Design
+				</h1>
+				<div id="designDrop" class="dropdown">
+					<section>
+						<h2>Inspiration</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/artquery_moodboard.png" alt="artquery_moodboard" />
+							</div>
+							<div class="dropP">
+								<p>
+									This is a moodboard I created when brainstorming the initial design of the site.
+									Much of my inspiration for my first design iteration lied in early computer-art, and
+									a blue & black color palette.
+									<br />
+									<br />
+									Reading from top-left to bottom-right, the images are:
+								</p>
+								<ul>
+									<li>
+										Leon Harmon and Ken Knowlton,
+										<a
+											href="https://buffaloakg.org/artworks/p20142-computer-nude-studies-perception-i#:~:text=Computer%20Nude%20(Studies%20in%20Perception%20I)%20is%20the%20most%20widely,value%20as%20a%20human%20figure.
+										"
+										>
+											Computer Nude
+										</a>
+										(Studies in Perception I), 1967 [the most widely circulated early artwork made
+										using a computer]
+									</li>
+									<li>My own glyph/logo created for use across my websites</li>
+									<li>
+										A
+										<a href="../images/process/artquery/0460.jpg">computer artwork</a>
+										I created using Processing & Java for a creative coding course
+									</li>
+									<li>
+										<a
+											href="http://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/kare-wall.png
+										"
+										>
+											Windows wallpaper
+										</a>
+										created by Susan Kare, the designer of the first Mac icons as well as late 1990s
+										windows icons.
+									</li>
+									<li>
+										<a
+											href="http://cs.gettysburg.edu/~duncjo01/archive/patterns/windows/logo-scr.png
+										"
+										>
+											Early windows screensaver
+										</a>
+										by Susan Kare.
+									</li>
+									<li>
+										<a
+											href="https://upload.wikimedia.org/wikipedia/en/6/68/John_Coltrane_-_Blue_Train.jpg"
+										>
+											Cover art
+										</a>
+										for John Coltrane&#8217;s 1958 album Blue Train, designed by Reid Miles.
+									</li>
+								</ul>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Aesthetics & Objectives</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/brutalism.jpg" alt="artquery_brainstorm_sketch" />
+							</div>
+							<div class="dropP">
+								<p>
+									<em>From my first design brief:</em>
+									<br />
+									<br />
+									My website design will be minimal and brutalist, with the intention of keeping the
+									emphasis on user interaction with art. My background colors will be white, black, or
+									brown, and my type will be green, red, black, or white. Navigation will be simple
+									and straightforward, and art will be centered and own most of the viewport.
+								</p>
+								<p>
+									Since images are the driving user experience in this site, I wanted the aesthetics
+									of the site to blend seamlessly into background and not change the user's
+									perceptions of each image -- the user experience IS the aesthetic.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Iterations</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/artquer_3.png" alt="artquery_brainstorm_sketch" />
+							</div>
+							<div class="dropP">
+								<p>
+									My first working draft of the website used blue Monospaced text against a black
+									background, inline with my "early internet" and brutalist inspirations. I hoped to
+									give the feeling of a terminal / console interface. However, as I shared the design
+									with my peers, I realized that the color pallette was too harsh, and compromised
+									readability.
+									<br />
+									<br />
+									I decided to keep the minimal page layout and Monospaced font, and change the colors
+									to an easily readable pallette with dark text against a light background.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<h2>Final Color & Type</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/process/artquery/artquery_5.jpg" alt="artquery_finallayout" />
+								<img src="../images/process/artquery/artquery_6.jpg" alt="" />
+							</div>
+							<div class="dropP">
+								<p>
+									I chose a soft tan background [#d9d7cc] and monospaced font [Inconsolata] for my
+									final design.
+									<br />
+									<br />
+									The background color provides a less jarring alternative to white, preventing any
+									clashing with the images in question. The monospaced font is easily readable and
+									retains a minimal, brutalist feeling given its "default" nature.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+			<article id="info" class="closed">
+				<h1 id="infoToggle">
+					Info
+					<i id="infoArrow" class="fa-solid fa-chevron-right"></i>
+				</h1>
+				<div id="infoDrop" class="dropdown">
+					<section>
+						<h2>Intention</h2>
+						<div class="dropSection">
+							<div class="dropImg">
+								<img src="../images/artquery_preview2.jpg" alt="artquery_info" />
+							</div>
+							<div class="dropP">
+								<p>
+									I created this site as a way to inspire a shift away from academic conceptions of
+									art for the user. I've often had friends tell me that they feel as if they can't
+									enjoy a museum because they are not formally educated in art history -- this is a
+									shame, as the enjoyment of art ultimately lies in personal subjectivity.
+									<br />
+									<br />
+									By interacting with art pieces without context or labels, the user is able to simply
+									enjoy the images at face value. By doing this, I hoped the user would reflect upon
+									their personal taste and identify places of emotional resonance [specifically in the
+									emotion part of the quiz]. At the end of the experience, I provided the user with
+									subjective results [suggestions towards why the user felt how they did about their
+									chosen art, and a shifting colorful 'aura'] and objective results [artists, titles,
+									dates, and subject matter]. Ultimately, I hoped this would encourage the user to
+									feel less intimidated about forming opinions and emotions on art, and that all
+									thought on art is equally valuable, academic or not.
+								</p>
+								<div class="svg">
+									<svg
+										version="1.1"
+										xmlns="http://www.w3.org/2000/svg"
+										xmlns:xlink="http://www.w3.org/1999/xlink"
+										x="0px"
+										y="0px"
+										viewBox="0 0 10.58 12.15"
+										style="enable-background: new 0 0 10.58 12.15"
+										xml:space="preserve"
+									>
+										<g>
+											<path
+												fill="white"
+												stroke="black"
+												stroke-width="1%"
+												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+			c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
+											/>
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</article>
+		</main>
+		<script src="../projects.js"></script>
+	</body>
+</html>

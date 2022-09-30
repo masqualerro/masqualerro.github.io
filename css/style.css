@@ -106,7 +106,8 @@ span {
 	width: 100%;
 }
 
-.imgCont img {
+.imgCont img,
+.imgCont video {
 	margin-top: 5px;
 	width: 100%;
 	/* max-width: 49.5%; */
