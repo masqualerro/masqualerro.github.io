@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Art Query</title>
+		<title>Processing Music Visualizer</title>
 
 		<script src="https://kit.fontawesome.com/daafecce72.js" crossorigin="anonymous"></script>
 		<link rel="stylesheet" href="../css/projects.css" />
@@ -134,12 +134,21 @@
 						<div class="dropSection">
 							<div class="dropImg">
 								<video autoplay loop muted playsinline>
+									<source src="../images/process/musicviz/ell1.webm" />
+									<source src="../images/process/musicviz/ell1.mp4" />
+								</video>
+								<video autoplay loop muted playsinline>
+									<source src="../images/process/musicviz/rect1.webm" />
+									<source src="../images/process/musicviz/rect1.mp4" />
+								</video>
+								<video autoplay loop muted playsinline>
 									<source src="../images/process/musicviz/musicviz_early.webm" />
 									<source src="../images/process/musicviz/musicviz_early.mp4" />
 								</video>
-								<img src="../images/process/musicviz/musicviz_7.png" alt="" />
-
-								<img src="../images/process/musicviz/musicviz_5.png" alt="" />
+								<video autoplay loop muted playsinline>
+									<source src="../images/process/musicviz/fill1.webm" />
+									<source src="../images/process/musicviz/fill1.mp4" />
+								</video>
 							</div>
 							<div class="dropP">
 								<p>
@@ -153,14 +162,17 @@
 									<a href="https://code.compartmental.net/minim/">minim</a>
 									library. Each circle relied in a different manner on the audio channels, creating a
 									fluctuating, versatile, geometric effect. I also added a version of this using
-									rectangles instead of ellipses.
+									rectangles instead of ellipses. For the UI, I decided on a black background, to
+									match early iTunes visualizers.
 									<br />
 									<br />
-									For the UI, I decided on a black background, to match early iTunes visualizers. I
-									chose basic color options (blue, red, yellow) and a rainbow option that would change
-									to a random color on each beat of the song. The type included in the rough version
-									was meant for my own personal reference during testing, and would later be
-									implemented into a UI for the user.
+									In the next version of my project, I added customization options. I added
+									functionality to switch between “ellipse” and “rectangle” options, and afforded the
+									user basic color (blue, red, yellow) + a rainbow option that would change to a
+									random color on each beat of the song. I also experimented with “fill” and “no-fill”
+									options for the shapes used in the visualizer. The type included in the rough
+									version was meant for my own personal reference during testing and would later be
+									implemented into the final UI.
 								</p>
 								<div class="svg">
 									<svg
@@ -186,116 +198,39 @@
 								</div>
 							</div>
 						</div>
-						<h2>Meme</h2>
+						<h2>Final Product + User Flow</h2>
 						<div class="dropSection">
 							<div class="dropImg">
-								<img src="../images/process/artquery/artquer_3.png" alt="artquery_brainstorm_sketch" />
+								<video autoplay loop muted playsinline>
+									<source src="../images/process/musicviz/finalprod_video.webm" />
+									<source src="../images/process/musicviz/finalprod_video.mp4" />
+								</video>
+								<img src="../images/process/musicviz/finalprod1.png" alt="" />
+								<img src="../images/process/musicviz/finalprod2.png" alt="" />
+								<img src="../images/process/musicviz/finalprod3.png" alt="" />
 							</div>
 							<div class="dropP">
-								<p>Initial development was spent on creating:</p>
-								<ul>
-									<li>Drag and drop functionality</li>
-									<li>Click image to expand to overlay for closer look</li>
-									<li>User flow of website</li>
-									<li>Positional styling</li>
-								</ul>
-
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Curating Artwork</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/artquery/artquery_3.jpg" alt="artquery_brainstorm_sketch" />
-							</div>
-							<div class="dropP">
-								<ol>
-									<li>
-										Broke down hierarchical structure of quiz into 6 major art movements and
-										subsequent subgenres
-									</li>
-									<li>
-										Chose 10 pieces within each major movement that evenly spanned across its
-										respective subgenres
-									</li>
-									<li>
-										Chose “cover image” for each genre in the first step of the quiz in which the
-										user must choose their favorite piece out of 5 artworks
-									</li>
-									<li>
-										Created JSON file with data (artist, title, year, genre, imagery/subject etc.)
-										and Boolean attributes for each artwork (ex. Human = true, nature = false)
-										&#8211; [this data is incorporated into the final quiz output]
-									</li>
-								</ol>
-
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Quiz Output</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/artquery/artquery_4.jpg" alt="artquery_brainstorm_sketch" />
-							</div>
-							<div class="dropP">
-								<ul>
-									<li>
-										Wrote a paragraph corresponding to different genre / emotional combinations for
-										each major art movement making assumptions about the user &#8211; this would go
-										into “feeling” output
-									</li>
-									<li>
-										Created chart listing objective preferences (eg. Humans in nature, religious
-										imagery, etc.)
-									</li>
-									<li>
-										Extracted colors from user's favorite pieces to create personal, fluxtuating
-										“aura" and suggest colors they might like
-									</li>
-									<li>Listed favorite pieces from their quiz to encourage research</li>
-								</ul>
+								<p>
+									The final product contains a user flow starting at a “homepage” with navigation
+									controls leading to individual “now playing” pages for each song. The “now playing”
+									pages contain customization options for the visualizer, as well as play/pause
+									controls and control to return to the homepage. Also included on the homepage are
+									several color-scheme options for the UI, with a default “dark mode,” “light mode,”
+									and “alternate.”
+									<br />
+									<br />
+									At the top of each “now playing” page exists a bar showing progress through the
+									song, as well as a background animation simulating stars and space, as well as an
+									expanding array of dots following the cursor. The “now playing” pages were designed
+									around a centered visualizer and emphasis on the song name.
+									<br />
+									<br />
+									Click
+									<a href="../images/musicviz_final.mp4">here</a>
+									for a video demo, and
+									<a href="https://github.com/masqualerro/music_visualizer_processing">here</a>
+									to try the app yourself.
+								</p>
 								<div class="svg">
 									<svg
 										version="1.1"
