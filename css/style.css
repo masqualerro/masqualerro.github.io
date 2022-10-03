@@ -113,6 +113,27 @@ span {
 	/* max-width: 49.5%; */
 }
 
+#aboutMain {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#aboutMe {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 600px;
+}
+
+#aboutMe p {
+	padding: 10px;
+}
+
+#aboutMe img {
+	max-width: 360px;
+}
+
 @media screen and (min-width: 700px) {
 	.mainArticle {
 		display: flex;
@@ -233,6 +254,12 @@ span {
 		display: block;
 		margin-top: 0.5em;
 		font-size: 2em;
+	}
+}
+
+@media screen and (min-width: 914px) {
+	#aboutHead {
+		border-right: 1px solid black;
 	}
 }
 
