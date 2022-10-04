@@ -2,6 +2,7 @@
 
 body {
 	font-family: 'Satoshi-Regular', sans-serif;
+	overflow-x: hidden;
 }
 
 header h1 {
@@ -147,13 +148,17 @@ main article > h1:hover {
 	opacity: 0;
 	padding: 1em;
 	display: flex;
-	width: auto;
+	/* width: auto; */
 	width: 80%;
 }
 
 #designDrop {
 	right: 0;
 }
+/* 
+#designDrop .dropP {
+	transform: translateY(-128px);
+} */
 
 .dropdown a:hover {
 	color: #f241c3;
@@ -176,9 +181,16 @@ i {
 	transition: 0.5s ease transform;
 }
 
+#process,
 #design,
 #info {
 	transition: 0.5s ease all;
+}
+
+#process,
+#design,
+#info {
+	transition: 1s ease opacity;
 }
 
 .dropdown h2 {
@@ -196,12 +208,14 @@ i {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-self: flex-start;
+	height: auto;
 }
 
 .dropImg {
 	/* border: 1px solid blue; */
 	flex: 1.25;
-	height: inherit;
+	/* height: inherit; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -213,9 +227,16 @@ i {
 	display: flex;
 	flex-direction: column;
 	/* border: 1px solid green; */
-	height: inherit;
 	justify-content: left;
 	padding-left: 10px;
+	align-self: flex-start;
+	top: 0;
+	height: auto;
+}
+
+.dropP {
+	position: sticky;
+	top: -100px;
 }
 
 .dropSection img,
@@ -233,6 +254,8 @@ i {
 	/* border: 1px solid red; */
 	font-size: 0.8em;
 	padding-left: 10px;
+	/* position: sticky;
+	top: 0px; */
 }
 .dropSection p:first-child {
 	margin-top: 0;
@@ -286,8 +309,39 @@ svg {
 	display: none;
 }
 
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: auto;
+	text-align: center;
+	height: 2.5rem;
+	width: 100%;
+}
+
+footer i {
+	font-size: 1.5em;
+	padding-bottom: 10px;
+	padding-top: 2em;
+}
+
+footer i:hover {
+	color: #f241c3;
+	transform: translateY(-0.1em);
+	cursor: pointer;
+}
+
 @media screen and (min-width: 800px) {
 	.dropImg {
 		flex: 1;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.dropSection {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		align-self: flex-start;
+		height: auto;
 	}
 }

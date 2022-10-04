@@ -7,9 +7,9 @@ svg {
 	padding: 5px;
 }
 
-svg:hover {
+/* svg:hover {
 	transform: rotateY(-180deg);
-}
+} */
 #headSvg {
 	display: none;
 }
@@ -159,6 +159,9 @@ span {
 		padding-left: 12px;
 		margin-top: -10px;
 		max-width: 40%;
+		position: sticky;
+		top: 0;
+		align-self: flex-start;
 	}
 	.svg {
 		flex: 1;

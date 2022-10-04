@@ -9,6 +9,7 @@
 	const info = document.getElementById('info');
 	const infoToggle = document.getElementById('infoToggle');
 	const infoDrop = document.getElementById('infoDrop');
+	const designChildren = designDrop.querySelectorAll('.dropP');
 
 	const svg = document.querySelectorAll('svg');
 	for (let i = 0; i < svg.length; i++) {
@@ -28,6 +29,12 @@
 		} else if (process.className == 'closed' && design.className == 'open') {
 			info.style.transform = `translateY(${designDrop.offsetHeight}px)`;
 		} else if (process.className == 'closed' && design.className == 'closed') {
+		}
+	}
+
+	function adjustChild() {
+		for (let i = 0; i < designChildren.length; i++) {
+			designChildren[i].style.transform = `translateY(0px)`;
 		}
 	}
 
@@ -119,6 +126,7 @@
 				designDrop.style.opacity = '100';
 				designDrop.style.transform = `translateY(${designToggle.offsetHeight}px)`;
 			}, 10);
+			designDrop.style.transform = `translateY(0px)`;
 			calibrate();
 		} else if (design.className == 'open' && process.className == 'closed') {
 			design.className = 'closed';
