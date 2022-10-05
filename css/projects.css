@@ -341,7 +341,65 @@ footer i:hover {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-around;
-		align-self: flex-start;
+		align-self: auto;
 		height: auto;
 	}
+	.dropSection p {
+		margin: 0px;
+		/* border: 1px solid red; */
+		font-size: 0.8em;
+		padding-left: 0px;
+		/* position: sticky;
+		top: 0px; */
+	}
+	.dropSection ul,
+	.dropSection ol {
+		/* border: 1px solid red; */
+		font-size: 0.8em;
+		margin: 10px 0px 10px 0px;
+	}
+	.dropdown {
+		position: initial;
+		border: none;
+		z-index: -1;
+		opacity: 0;
+		padding: 1em;
+		display: none;
+		/* width: auto; */
+		width: 80%;
+		margin: auto;
+		padding-top: 2em;
+		margin-top: -128px;
+		border: 1px solid pink;
+	}
+	.dropImg {
+		/* border: 1px solid blue; */
+		flex: 1;
+		/* height: inherit; */
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dropP {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		/* border: 1px solid green; */
+		justify-content: inherit;
+		padding-left: 0px;
+		align-self: auto;
+		top: 0;
+		height: auto;
+		border: 1px solid green;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	/* #process h1,
+	#design h1,
+	#info h1 {
+		text-align: center;
+	} */
 }
