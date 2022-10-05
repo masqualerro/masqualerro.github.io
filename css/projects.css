@@ -330,6 +330,10 @@ footer i:hover {
 	cursor: pointer;
 }
 
+.mobileFooter {
+	display: none;
+}
+
 @media screen and (min-width: 800px) {
 	.dropImg {
 		flex: 1;
@@ -337,6 +341,30 @@ footer i:hover {
 }
 
 @media screen and (max-width: 450px) {
+	.footer {
+		display: none;
+	}
+
+	.mobileFooter {
+		display: inherit;
+		/* border: 1px solid red; */
+		text-align: center;
+		padding-top: 10px;
+	}
+
+	.mobileFooter i {
+		padding: 1em;
+		font-size: 1.5em;
+		/* border: 1px solid black;
+		border-radius: 50%; */
+	}
+
+	.mobileFooter i:hover {
+		color: #f241c3;
+		transform: translateY(-0.1em);
+		cursor: pointer;
+	}
+
 	.dropSection {
 		display: flex;
 		flex-direction: column;
@@ -370,7 +398,7 @@ footer i:hover {
 		margin: auto;
 		padding-top: 2em;
 		margin-top: -128px;
-		border: 1px solid pink;
+		/* border: 1px solid pink; */
 	}
 	.dropImg {
 		/* border: 1px solid blue; */
@@ -392,11 +420,12 @@ footer i:hover {
 		align-self: auto;
 		top: 0;
 		height: auto;
-		border: 1px solid green;
+		/* border: 1px solid green; */
 		padding: 0;
 		margin: 0;
 		width: 100%;
 	}
+
 	/* #process h1,
 	#design h1,
 	#info h1 {
