@@ -425,6 +425,9 @@ footer i:hover {
 		margin: 0;
 		width: 100%;
 	}
+	#musicviz-link {
+		font-size: 0.8em;
+	}
 
 	/* #process h1,
 	#design h1,
