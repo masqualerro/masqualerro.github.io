@@ -1,6 +1,7 @@
 (function () {
 	'use strict';
 
+	// VARIABLES
 	const process = document.getElementById('process');
 	const processToggle = document.getElementById('processToggle');
 	const processDrop = document.getElementById('processDrop');
@@ -16,11 +17,14 @@
 	const processMFooter = document.getElementById('processMFoot');
 	const designMFooter = document.getElementById('designMFoot');
 	const infoMFooter = document.getElementById('infoMFoot');
-
 	const svg = document.querySelectorAll('svg');
+
 	for (let i = 0; i < svg.length; i++) {
 		svg[i].addEventListener('click', function () {
 			this.style.transform = 'rotateY(-180deg)';
+			setTimeout(() => {
+				this.style.transform = 'rotateY(0deg)';
+			}, '700');
 		});
 	}
 
