@@ -254,6 +254,8 @@ i {
 	/* border: 1px solid red; */
 	font-size: 0.8em;
 	padding-left: 10px;
+	/* border: 1px solid red; */
+	margin-right: 2em;
 	/* position: sticky;
 	top: 0px; */
 }
@@ -272,7 +274,7 @@ ul li,
 ol li {
 	list-style-type: circle;
 	padding-bottom: 0.5em;
-	margin-right: 10px;
+	margin-right: 2em;
 }
 
 ul li:last-of-type {
@@ -314,24 +316,69 @@ svg {
 	bottom: 0;
 	width: auto;
 	text-align: center;
-	height: 2.5rem;
+	height: 2em;
 	width: 100%;
 }
 
-footer i {
-	font-size: 1.5em;
-	padding-bottom: 10px;
-	padding-top: 2em;
+footer button,
+.mobileFooter button {
+	margin-top: 3.5em;
+	margin-bottom: 1em;
+	background: none;
+	box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+	font-size: 13px;
+	background-color: transparent;
+	outline: none;
+	border: 1px solid black;
+	border-radius: 45px;
+	width: 75px;
+	height: 20px;
+	transition: all 0.25s ease;
 }
 
-footer i:hover {
-	color: #f241c3;
+footer button:hover,
+.mobileFooter button:hover {
 	transform: translateY(-0.1em);
 	cursor: pointer;
+	background: #f241c3;
+	border: none;
+	color: white;
+	/* background-position: 100px; */
+	box-shadow: 0px 0px 0px black;
+	border: 2px solid transparent;
+	transform: scale(1.05);
 }
 
 .mobileFooter {
 	display: none;
+}
+
+.xButton {
+	font-size: 1.4em;
+	position: -webkit-sticky;
+	position: sticky;
+	top: -120px;
+	text-align: right;
+	height: 100%;
+	align-self: flex-start;
+	float: right;
+	margin-top: -10px;
+	transition: 0.25s ease all;
+	z-index: 3;
+}
+
+.xButton:hover {
+	color: #f241c3;
+	cursor: pointer;
+	transform: scale(1.2);
+	transform: translateY(-0.1em);
+}
+
+section {
+	height: 100%;
+	/* border: 1px solid red; */
+	/* align-self: flex-start;
+	display: initial; */
 }
 
 @media screen and (min-width: 800px) {
@@ -349,17 +396,17 @@ footer i:hover {
 		display: inherit;
 		/* border: 1px solid red; */
 		text-align: center;
-		padding-top: 10px;
+		margin-top: -3em;
 	}
 
-	.mobileFooter i {
-		padding: 1em;
+	.mobileFooter button {
+		padding: 0.5em;
 		font-size: 1.5em;
 		/* border: 1px solid black;
 		border-radius: 50%; */
 	}
 
-	.mobileFooter i:hover {
+	.mobileFooter button:hover {
 		color: #f241c3;
 		transform: translateY(-0.1em);
 		cursor: pointer;
@@ -425,6 +472,7 @@ footer i:hover {
 		margin: 0;
 		width: 100%;
 	}
+
 	#musicviz-link {
 		font-size: 0.8em;
 	}

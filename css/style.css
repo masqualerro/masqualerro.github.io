@@ -159,6 +159,7 @@ span {
 		padding-left: 12px;
 		margin-top: -10px;
 		max-width: 40%;
+		position: -webkit-sticky;
 		position: sticky;
 		top: 0;
 		align-self: flex-start;
@@ -242,6 +243,7 @@ span {
 	}
 
 	#sticky {
+		position: -webkit-sticky;
 		position: sticky;
 		top: 10px;
 	}
