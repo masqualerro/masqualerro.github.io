@@ -1,713 +1,561 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Film Photo Archive</title>
 
-		<script src="https://kit.fontawesome.com/daafecce72.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../css/projects.css" />
-	</head>
-	<body>
-		<header>
-			<h1>Film Photo Archive</h1>
-			<nav>
-				<a href="../index.html">Home</a>
-				<a href="../about.html">About</a>
-				<a href="https://www.linkedin.com/in/miguel-sedillo/">LinkedIn</a>
-				<a href="https://github.com/masqualerro">GitHub</a>
-				<a
-					href="mailto:&#115;&#101;&#100;&#105;&#108;&#108;&#111;&#109;&#105;&#103;&#117;&#101;&#108;&#046;&#100;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
-				>
-					Email
-				</a>
-			</nav>
-			<a class="siteLink" id="filmarchive-link" href="https://masqualerro.github.io/film-photo-archive/">
-				https://masqualerro.github.io/film-photo-archive/
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Film Photo Archive</title>
+
+	<script src="https://kit.fontawesome.com/daafecce72.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../css/projects.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Film Photo Archive</h1>
+		<nav>
+			<a href="../index.html">Home</a>
+			<a href="../about.html">About</a>
+			<a href="https://www.linkedin.com/in/miguel-sedillo/">LinkedIn</a>
+			<a href="https://github.com/masqualerro">GitHub</a>
+			<a
+				href="mailto:&#115;&#101;&#100;&#105;&#108;&#108;&#111;&#109;&#105;&#103;&#117;&#101;&#108;&#046;&#100;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+				Email
 			</a>
-		</header>
-		<main>
-			<article id="process" class="closed">
-				<h1 id="processToggle">
-					Process
-					<i id="processArrow" class="fa-solid fa-chevron-right"></i>
-				</h1>
-				<div id="processDrop" class="dropdown">
-					<section>
-						<div id="processX" class="xButton">
-							<i class="fa-solid fa-x"></i>
-						</div>
-						<h2>Initial Brainstorm</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/filmarchive/filmarchive_1.jpg"
-									alt="filmarchive_sketchbook_page"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_2.jpg"
-									alt="filmarchive_sketchbook_page_2"
-								/>
-							</div>
-							<div class="dropP">
-								<p>
-									My initial brainstorm for this site was prompted by a game I made for a web
-									development class at UC Davis, as well as my passion for film photography as a hobby
-									and artistic medium.
-									<br />
-									<br />
-									Around the office building where I worked at the time, there existed a band of stray
-									cats, and one day I took a series of photos of them on my Pentax K1000. I chose to
-									create a game in which the user would click through a series of my photos with the
-									intention of finding each cat.
-									<br />
-									<br />
-									The user was able to click on various points of interests to zoom in/out and move
-									around the office building during their search. The game was inspired by a desire to
-									use/share my film photos through web dev projects, so I chose to dive into that
-									desire and make an entire website dedicated to my hobby.
-									<br />
-									<br />
-									<em>***here are my initial notes for the cat game**</em>
-								</p>
-
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Initial UX/UI Design</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/filmarchive/filmarchive_3.jpg"
-									alt="filmarchive_wireframe1"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_4.jpg"
-									alt="filmarchive_wireframe2"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_5.jpg"
-									alt="filmarchive_wireframe3"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_6.jpg"
-									alt="filmarchive_wireframe4"
-								/>
-							</div>
-							<div class="dropP">
-								<p>
-									Before the coding process, I created several prototypes in Adobe XD to work from. I
-									made these with several points of emphasis in mind:
-								</p>
-								<ul>
-									<li>
-										Photography should be easily accessible and pleasant to view with as much user
-										control as possible
-									</li>
-									<li>
-										Design should be as minimal, readable, and accessible as possible while still
-										maintaining a tasteful and purposeful feeling
-									</li>
-									<li>
-										Follow brutalist web design aesthetics while incorporating calm, earthy, and
-										less stark color schemes
-									</li>
-									<li>Emphasize images</li>
-									<li>Utilize captions and accompanying text for my images sparingly</li>
-									<li>Include cat game as bonus area</li>
-								</ul>
-								<p>
-									I designed a homepage displaying circles for “featured collections” &#8211; which
-									could then be clicked to go to the corresponding photoshoot. It was my hope that
-									this would enable immediate user interest and interaction.
-									<br />
-									<br />
-									I designed the individual “collection pages” largely around images &#8211; with a
-									scrollable gallery displaying large images. To fulfill my desire of maximum user
-									control/interaction, I included a “control center” showing key controls for the user
-									to apply filters to the images in the gallery. Also included was a minimal
-									navigation bar and the title of the photoshoot. One feature not included in my
-									wireframes that would be added in my first working prototype is a "down arrow" below
-									the image slideshow that would display a menu with info about the shoot.
-									<br />
-									<br />
-									I also designed an archive page, where the user could view every single one of my
-									photos in a large gallery. Finally, I designed the game page in a minimal fashion,
-									with the game itself at the center of the page and constantly visible
-									controls/instructions.
-								</p>
-
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>User Testing</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/filmarchive/filmarchive_test4.jpg"
-									alt="screenshot_of_site_for_user_testing"
-								/>
-								<img src="../images/process/filmarchive/filmarchive_test1.jpg" alt="alessandra_test" />
-								<img src="../images/process/filmarchive/filmarchive_test2.jpg" alt="adam_test" />
-								<img src="../images/process/filmarchive/filmarchive_test3.jpg" alt="guan_test" />
-							</div>
-							<div class="dropP">
-								<p>
-									After building a working draft of my site faithful to the design of my protoypes, I
-									began my user testing process, in which I allowed three of my peers to interact with
-									my site with no direction or context. After this, I would ask for their favorite
-									parts of the site, as well as things they found unclear / suggestions for
-									improvements. I&#8217;ve summarized the result of each user test here
-									<em>
-										[please note the screenshot of the working prototype for reference on their
-										critiques]
-									</em>
-									:
-								</p>
-								<ul>
-									<li>
-										<em>Alessandra:</em>
-										During Alessandra's testing, the action of clicking the down arrow to display
-										"info" was not immediately apparent, and so she completely ignored it until
-										afterwards when I told her about it. Instead, she thought that it was saying to
-										scroll down. Also, Alessandra's first instinct was to scroll horizontally
-										instead of vertically to navigate the photo slideshow. I will take all this
-										advice into account and add more scrolling functionality + redesign the down
-										arrow.
-									</li>
-									<li>
-										<em>Adam:</em>
-										Adam was also working on a photography site that displayed our photos in
-										slideshows, so we exchanged some helpful and relevant ideas (most notably, a way
-										to enable both vertical and horizontal scrolling on a horizontal slideshow).
-										Adam thought that the "collections" page seemed redundant when compared to the
-										home page, since they serve incredibly similar purposes. Also, he thought that
-										the arrow for info was unclear, and should perhaps be changed to a button saying
-										"info" or something along those lines.
-									</li>
-									<li>
-										<em>Guan:</em>
-										Guan really enjoyed the filter controls for the images, but he suggested that
-										the phrasing for the instructions could be clearer, like "press 'g' for
-										grayscale" instead of "'g' for grayscale." He also echoed the sentiment that the
-										down arrow for info was vague, and should be changed into something more clear
-										that better communicated its purpose. This issue was echoed throughout all my
-										user tests, so I will be sure to address it in my final product.
-									</li>
-								</ul>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Implementation & Final Result</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/filmarchive/filmarchive_final0.jpg" alt="final_homepage" />
-								<img
-									src="../images/process/filmarchive/filmarchive_final1.jpg"
-									alt="final_shoot_page"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_final2.jpg"
-									alt="final_collections_page"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_final3.jpg"
-									alt="final_archive_page"
-								/>
-								<img src="../images/process/filmarchive/filmarchive_final4.jpg" alt="final_game_page" />
-							</div>
-							<div class="dropP">
-								<p>
-									The final design of my website was faithful to my initial design, with several
-									accessibility changes based off user tests, and personal brainstorming.
-									<br />
-									<br />
-									I maintained my homepage design and centered the page around featured circle links
-									and added a hue-rotate filter on hover to hint towards the filter interactions
-									afforded to the user. I changed the “ALL” link from my wireframes to a “random”
-									link, which will take the user to a random photoshoot page. Not only is this a fun
-									option for the indecisive viewer, but it also removes the redundancy given the
-									“collections” link in the navigation menu.
-									<br />
-									<br />
-									In line with a common critique during user testing, I replaced the “down arrow”
-									leading to the info section with a large, interactive “info” button, complete with
-									hover animations and color change. This makes its purpose clear, fun, and
-									unambiguous. I chose to retain my “controls” menu from the prototype, as I believe
-									the wording makes for a fun feeling of discovering a hidden feature in key controls
-									to interact with the photos as the user. Perhaps the biggest addition to the user
-									page was diverse scrolling functionality, allowing the user to scroll through the
-									image gallery using both horizontal and vertical scrolling on their trackpad.
-									Everybody that had tested my website before this point was compelled to scroll in a
-									different direction, so this solved that conundrum and made a “wrong choice”
-									impossible.
-									<br />
-									<br />
-									A large addition to the site is the “collections” page &#8211; with a menu of all my
-									photoshoots to date that can be scrolled through/cycled using arrow buttons. Next to
-									the menu exists an empty circle, which will be filled in with a preview of each
-									photoshoot when hovering over the corresponding title.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="mobileFooter">
-							<i id="processMFoot" class="fa-solid fa-x"></i>
-						</div>
-					</section>
-					<div class="footer">
-						<footer>
-							<button id="processFoot">close</button>
-						</footer>
+		</nav>
+		<a class="siteLink" id="filmarchive-link" href="https://masqualerro.github.io/film-photo-archive/">
+			https://masqualerro.github.io/film-photo-archive/
+		</a>
+	</header>
+	<main>
+		<article id="process" class="closed">
+			<h1 id="processToggle">
+				Process
+				<i id="processArrow" class="fa-solid fa-chevron-right"></i>
+			</h1>
+			<div id="processDrop" class="dropdown">
+				<section>
+					<div id="processX" class="xButton">
+						<i class="fa-solid fa-x"></i>
 					</div>
-				</div>
-			</article>
-			<article id="design" class="closed">
-				<h1 id="designToggle">
-					<i id="designArrow" class="fa-solid fa-chevron-left"></i>
-					Design
-				</h1>
-				<div id="designDrop" class="dropdown">
-					<section>
-						<div id="designX" class="xButton">
-							<i class="fa-solid fa-x"></i>
+					<h2>Initial Brainstorm</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/filmarchive_1.jpg"
+								alt="filmarchive_sketchbook_page" />
+							<img src="../images/process/filmarchive/filmarchive_2.jpg"
+								alt="filmarchive_sketchbook_page_2" />
 						</div>
-						<h2>Inspiration</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/filmarchive/designinspo_1.png" alt="design_inspiration1" />
-								<img src="../images/process/filmarchive/designinspo_2.png" alt="design_inspiration2" />
-								<img src="../images/process/filmarchive/designinspo_3.png" alt="design_inspiration3" />
-								<img src="../images/process/filmarchive/designinspo_4.png" alt="design_inspiration4" />
-							</div>
-							<div class="dropP">
-								<p>
-									Much of my initial design inspiration came while browsing through photography
-									portfolio websites that I found on
-									<a href="https://www.awwwards.com/">awwwards.com</a>
-									. In particular, I enjoyed
-									<a href="https://www.icelandicexplorer.com/projects">Icelandic Explorer</a>
-									, for Gunnar Freyr’s portfolio, and
-									<a href="https://slowness.com/encyclopedia-of-the-farm/">Slowness</a>
-									-- about “La Granja” in Ibiza.
-									<br />
-									<br />
-									For “
-									<em>Icelandic Explorer</em>
-									”, I greatly admired the strong balance between bold typography and photographs
-									&#8211; both received large emphasis but did not detract from the other. I also
-									enjoyed the creative animations/transitions applied to images upon hover/click,
-									which was fun and interactive from my standpoint as a user. While the site had a
-									photo gallery similar to mine, the only navigation option was to “click and drag”
-									through it, which quickly became cumbersome and unintuitive.
-									<br />
-									<br />
-									For “
-									<em>Slowness</em>
-									”, I enjoyed the image interaction process the most &#8211; after selecting an image
-									the flash and exposure on the image would change. This made my experience in viewing
-									the photos active and interesting, and compelled me to stay and mess around with the
-									site longer than I would have had I only had the option to view the photos and not
-									interact with them.
-								</p>
+						<div class="dropP">
+							<p>
+								My initial brainstorm for this site was prompted by a game I made for a web
+								development class at UC Davis, as well as my passion for film photography as a hobby
+								and artistic medium.
+								<br />
+								<br />
+								Around the office building where I worked at the time, there existed a band of stray
+								cats, and one day I took a series of photos of them on my Pentax K1000. I chose to
+								create a game in which the user would click through a series of my photos with the
+								intention of finding each cat.
+								<br />
+								<br />
+								The user was able to click on various points of interests to zoom in/out and move
+								around the office building during their search. The game was inspired by a desire to
+								use/share my film photos through web dev projects, so I chose to dive into that
+								desire and make an entire website dedicated to my hobby.
+								<br />
+								<br />
+								<em>***here are my initial notes for the cat game**</em>
+							</p>
 
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
 							</div>
 						</div>
-						<h2>Aesthetics & Objectives</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/filmarchive/designinspo_1.png" alt="design_inspiration1" />
-								<img src="../images/process/filmarchive/designinspo_2.png" alt="design_inspiration2" />
-								<img src="../images/process/filmarchive/designinspo_3.png" alt="design_inspiration3" />
-								<img src="../images/process/filmarchive/designinspo_4.png" alt="design_inspiration4" />
-							</div>
-							<div class="dropP">
-								<p>
-									<em>From my first design brief:</em>
-									<br />
-									<br />
-									My design will be minimal, readable, and accessible while still maintaining a
-									tasteful and purposeful feeling. I will follow brutalist web design aesthetics while
-									incorporating calm, earthy, and less stark color schemes. I hope to emphasize the
-									images on my website and have a sans-serif accompanying font that will pop out
-									without overtaking the images.
-									<br />
-									<br />
-									I&#8217;d like to utilize captions and accompanying text for my images very
-									sparingly. I&#8217;d prefer that the viewer interpret the pictures for themselves
-									without trying to relate it back to certain context that I&#8217;ve given them.
-									<br />
-									<br />
-									It is likely that the images in each gallery will be displayed largely and evenly,
-									with small typography stating basic info like date, concept/collection name,
-									location, camera, film type etc.
-									<br />
-									<br />
-									The biggest feature that I think will make my project unique in comparison to other
-									galleries is that the user will be able to apply filters to the images they are
-									viewing as they please, giving the page a fun and interactive nature as opposed to a
-									passive viewing one.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Iterations</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/filmarchive/filmarchive_proto1.jpg"
-									alt="filmarchive_prototype1"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_proto2.jpg"
-									alt="filmarchive_prototype2"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_proto3.jpg"
-									alt="filmarchive_prototype3"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_proto4.jpg"
-									alt="filmarchive_prototype4"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_proto5.jpg"
-									alt="filmarchive_sitedraft1"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_proto6.jpg"
-									alt="filmarchive_sitedraft2"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_proto7.jpg"
-									alt="filmarchive_sitedraft3"
-								/>
-							</div>
-							<div class="dropP">
-								<p>
-									The first iterations of my site came through preliminary designs made in Adobe XD,
-									and a working draft of my site based off these designs to be used in user testing.
-									<br />
-									<br />
-									I designed a homepage displaying circles for “featured collections” &#8211; which
-									could then be clicked to go to the corresponding photoshoot. It was my hope that
-									this would enable immediate user interest and interaction.
-									<br />
-									<br />
-									I designed the individual “collection pages” largely around
-									<b>images</b>
-									#8211; with a scrollable gallery displaying large views of my photography. To
-									fulfill my desire of maximum user control/interaction, I included a “control center”
-									showing key controls for the user to apply filters to the images in the gallery.
-									Also included was a minimal navigation bar and the title of the photoshoot. In my
-									working prototype, I included a "down arrow" below the image slideshow that would
-									display a menu with info about the shoot. The down arrow would be changed to an
-									"info button" to better clarify its purpose and address concerns from user testing.
-									<br />
-									<br />
-									I also designed an archive page, where the user could view every single one of my
-									photos in a large gallery. Finally, I designed the "game" page in a minimal fashion,
-									with the game itself at the center of the page and constantly visible
-									controls/instructions.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Final Changes, Color & Type</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/filmarchive/filmarchive_final1.jpg"
-									alt="filmarchive_shoot_final"
-								/>
-								<img
-									src="../images/process/filmarchive/filmarchive_final2.jpg"
-									alt="filmarchive_collections_final"
-								/>
-								<img
-									src="../images/process/filmarchive/finalcolor_type.jpg"
-									alt="filmarchive_color&type_vscode"
-								/>
-							</div>
-							<div class="dropP">
-								<p>
-									The major final changes for the site came in the info button + dropdown, and a new
-									"collections" page. I styled the dropdown functionality around an interactive "info"
-									button, that brings up a section on info about the shoot and a collage giving an
-									overall representation of the shoot. Upon click, the button changes to an "x" which
-									closes the section.
-									<br />
-									<br />
-									The "collections" page features a menu of all my photoshoots to date [including
-									those not present in the featured shoots on the homepage] that can be scrolled
-									through/cycled using arrow buttons. Next to the menu exists an empty circle, which
-									will be filled in with a preview of each photoshoot when hovering over the
-									corresponding title.
-									<br />
-									<br />
-									I chose a light tan color [#d8d3cd] to convey a warm, welcome feeling without
-									clashing with my photos. I chose "General Sans Light" for my type, as it is a bold,
-									clean sans-serif font that accentuates the web design without overtaking the images
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="mobileFooter">
-							<i id="designMFoot" class="fa-solid fa-x"></i>
-						</div>
-					</section>
-					<div class="footer">
-						<footer>
-							<button id="designFoot">close</button>
-						</footer>
 					</div>
-				</div>
-			</article>
+					<h2>Initial UX/UI Design</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/filmarchive_3.jpg" alt="filmarchive_wireframe1" />
+							<img src="../images/process/filmarchive/filmarchive_4.jpg" alt="filmarchive_wireframe2" />
+							<img src="../images/process/filmarchive/filmarchive_5.jpg" alt="filmarchive_wireframe3" />
+							<img src="../images/process/filmarchive/filmarchive_6.jpg" alt="filmarchive_wireframe4" />
+						</div>
+						<div class="dropP">
+							<p>
+								Before the coding process, I created several prototypes in Adobe XD to work from. I
+								made these with several points of emphasis in mind:
+							</p>
+							<ul>
+								<li>
+									Photography should be easily accessible and pleasant to view with as much user
+									control as possible
+								</li>
+								<li>
+									Design should be as minimal, readable, and accessible as possible while still
+									maintaining a tasteful and purposeful feeling
+								</li>
+								<li>
+									Follow brutalist web design aesthetics while incorporating calm, earthy, and
+									less stark color schemes
+								</li>
+								<li>Emphasize images</li>
+								<li>Utilize captions and accompanying text for my images sparingly</li>
+								<li>Include cat game as bonus area</li>
+							</ul>
+							<p>
+								I designed a homepage displaying circles for “featured collections” &#8211; which
+								could then be clicked to go to the corresponding photoshoot. It was my hope that
+								this would enable immediate user interest and interaction.
+								<br />
+								<br />
+								I designed the individual “collection pages” largely around images &#8211; with a
+								scrollable gallery displaying large images. To fulfill my desire of maximum user
+								control/interaction, I included a “control center” showing key controls for the user
+								to apply filters to the images in the gallery. Also included was a minimal
+								navigation bar and the title of the photoshoot. One feature not included in my
+								wireframes that would be added in my first working prototype is a "down arrow" below
+								the image slideshow that would display a menu with info about the shoot.
+								<br />
+								<br />
+								I also designed an archive page, where the user could view every single one of my
+								photos in a large gallery. Finally, I designed the game page in a minimal fashion,
+								with the game itself at the center of the page and constantly visible
+								controls/instructions.
+							</p>
 
-			<article id="info" class="closed">
-				<h1 id="infoToggle">
-					Info
-					<i id="infoArrow" class="fa-solid fa-chevron-right"></i>
-				</h1>
-				<div id="infoDrop" class="dropdown">
-					<section>
-						<div id="infoX" class="xButton">
-							<i class="fa-solid fa-x"></i>
-						</div>
-						<h2>Intention</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/filmarchive/info.jpg" alt="my_filmphoto_from_positano" />
-							</div>
-							<div class="dropP">
-								<p>
-									I created this website to share and collect my film photography, and explore the
-									concept of “interactive art” and
-									<em>active viewing experiences</em>
-									.
-									<br />
-									<br />
-									In my experience viewing art on the computer, the process has seemed passive in a
-									way that viewing art in person does not. At a museum, the viewer is enabled to walk
-									around the piece, viewing it from different angles and lighting &#8211; this creates
-									an active link between the viewer and the art. On the computer, this action is taken
-									away &#8211; a .png or a .jpg is flat and static. Through this website, I enabled
-									the viewer to take action while they view my photos, experimenting with different
-									filters and colors, effectively viewing it at different angles and lighting as one
-									could at a museum.
-									<br />
-									<br />
-									The presence of fun and creative user interaction options is something that has
-									interested me greatly during my web development & design journey, and it has given
-									me an interest in the potential of viewing art and photography on a website [and
-									websites as an artistic medium of their own].
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-			c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
 							</div>
 						</div>
-						<div class="mobileFooter">
-							<i id="infoMFoot" class="fa-solid fa-x"></i>
-						</div>
-					</section>
-					<div class="footer">
-						<footer>
-							<button id="infoFoot">close</button>
-						</footer>
 					</div>
+					<h2>User Testing</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/filmarchive_test4.jpg"
+								alt="screenshot_of_site_for_user_testing" />
+							<img src="../images/process/filmarchive/filmarchive_test1.jpg" alt="alessandra_test" />
+							<img src="../images/process/filmarchive/filmarchive_test2.jpg" alt="adam_test" />
+							<img src="../images/process/filmarchive/filmarchive_test3.jpg" alt="guan_test" />
+						</div>
+						<div class="dropP">
+							<p>
+								After building a working draft of my site faithful to the design of my protoypes, I
+								began my user testing process, in which I allowed three of my peers to interact with
+								my site with no direction or context. After this, I would ask for their favorite
+								parts of the site, as well as things they found unclear / suggestions for
+								improvements. I&#8217;ve summarized the result of each user test here
+								<em>
+									[please note the screenshot of the working prototype for reference on their
+									critiques]
+								</em>
+								:
+							</p>
+							<ul>
+								<li>
+									<em>Alessandra:</em>
+									During Alessandra's testing, the action of clicking the down arrow to display
+									"info" was not immediately apparent, and so she completely ignored it until
+									afterwards when I told her about it. Instead, she thought that it was saying to
+									scroll down. Also, Alessandra's first instinct was to scroll horizontally
+									instead of vertically to navigate the photo slideshow. I will take all this
+									advice into account and add more scrolling functionality + redesign the down
+									arrow.
+								</li>
+								<li>
+									<em>Adam:</em>
+									Adam was also working on a photography site that displayed our photos in
+									slideshows, so we exchanged some helpful and relevant ideas (most notably, a way
+									to enable both vertical and horizontal scrolling on a horizontal slideshow).
+									Adam thought that the "collections" page seemed redundant when compared to the
+									home page, since they serve incredibly similar purposes. Also, he thought that
+									the arrow for info was unclear, and should perhaps be changed to a button saying
+									"info" or something along those lines.
+								</li>
+								<li>
+									<em>Guan:</em>
+									Guan really enjoyed the filter controls for the images, but he suggested that
+									the phrasing for the instructions could be clearer, like "press 'g' for
+									grayscale" instead of "'g' for grayscale." He also echoed the sentiment that the
+									down arrow for info was vague, and should be changed into something more clear
+									that better communicated its purpose. This issue was echoed throughout all my
+									user tests, so I will be sure to address it in my final product.
+								</li>
+							</ul>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Implementation & Final Result</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/filmarchive_final0.jpg" alt="final_homepage" />
+							<img src="../images/process/filmarchive/filmarchive_final1.jpg" alt="final_shoot_page" />
+							<img src="../images/process/filmarchive/filmarchive_final2.jpg"
+								alt="final_collections_page" />
+							<img src="../images/process/filmarchive/filmarchive_final3.jpg" alt="final_archive_page" />
+							<img src="../images/process/filmarchive/filmarchive_final4.jpg" alt="final_game_page" />
+						</div>
+						<div class="dropP">
+							<p>
+								The final design of my website was faithful to my initial design, with several
+								accessibility changes based off user tests, and personal brainstorming.
+								<br />
+								<br />
+								I maintained my homepage design and centered the page around featured circle links
+								and added a hue-rotate filter on hover to hint towards the filter interactions
+								afforded to the user. I changed the “ALL” link from my wireframes to a “random”
+								link, which will take the user to a random photoshoot page. Not only is this a fun
+								option for the indecisive viewer, but it also removes the redundancy given the
+								“collections” link in the navigation menu.
+								<br />
+								<br />
+								In line with a common critique during user testing, I replaced the “down arrow”
+								leading to the info section with a large, interactive “info” button, complete with
+								hover animations and color change. This makes its purpose clear, fun, and
+								unambiguous. I chose to retain my “controls” menu from the prototype, as I believe
+								the wording makes for a fun feeling of discovering a hidden feature in key controls
+								to interact with the photos as the user. Perhaps the biggest addition to the user
+								page was diverse scrolling functionality, allowing the user to scroll through the
+								image gallery using both horizontal and vertical scrolling on their trackpad.
+								Everybody that had tested my website before this point was compelled to scroll in a
+								different direction, so this solved that conundrum and made a “wrong choice”
+								impossible.
+								<br />
+								<br />
+								A large addition to the site is the “collections” page &#8211; with a menu of all my
+								photoshoots to date that can be scrolled through/cycled using arrow buttons. Next to
+								the menu exists an empty circle, which will be filled in with a preview of each
+								photoshoot when hovering over the corresponding title.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="mobileFooter">
+						<i id="processMFoot" class="fa-solid fa-x"></i>
+					</div>
+				</section>
+				<div class="footer">
+					<footer>
+						<button id="processFoot">close</button>
+					</footer>
 				</div>
-			</article>
-		</main>
-		<script src="../rehaul.js"></script>
-	</body>
+			</div>
+		</article>
+		<article id="design" class="closed">
+			<h1 id="designToggle">
+				<i id="designArrow" class="fa-solid fa-chevron-left"></i>
+				Design
+			</h1>
+			<div id="designDrop" class="dropdown">
+				<section>
+					<div id="designX" class="xButton">
+						<i class="fa-solid fa-x"></i>
+					</div>
+					<h2>Inspiration</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/designinspo_1.png" alt="design_inspiration1" />
+							<img src="../images/process/filmarchive/designinspo_2.png" alt="design_inspiration2" />
+							<img src="../images/process/filmarchive/designinspo_3.png" alt="design_inspiration3" />
+							<img src="../images/process/filmarchive/designinspo_4.png" alt="design_inspiration4" />
+						</div>
+						<div class="dropP">
+							<p>
+								Much of my initial design inspiration came while browsing through photography
+								portfolio websites that I found on
+								<a href="https://www.awwwards.com/">awwwards.com</a>
+								. In particular, I enjoyed
+								<a href="https://www.icelandicexplorer.com/projects">Icelandic Explorer</a>
+								, for Gunnar Freyr’s portfolio, and
+								<a href="https://slowness.com/encyclopedia-of-the-farm/">Slowness</a>
+								-- about “La Granja” in Ibiza.
+								<br />
+								<br />
+								For “
+								<em>Icelandic Explorer</em>
+								”, I greatly admired the strong balance between bold typography and photographs
+								&#8211; both received large emphasis but did not detract from the other. I also
+								enjoyed the creative animations/transitions applied to images upon hover/click,
+								which was fun and interactive from my standpoint as a user. While the site had a
+								photo gallery similar to mine, the only navigation option was to “click and drag”
+								through it, which quickly became cumbersome and unintuitive.
+								<br />
+								<br />
+								For “
+								<em>Slowness</em>
+								”, I enjoyed the image interaction process the most &#8211; after selecting an image
+								the flash and exposure on the image would change. This made my experience in viewing
+								the photos active and interesting, and compelled me to stay and mess around with the
+								site longer than I would have had I only had the option to view the photos and not
+								interact with them.
+							</p>
+
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Aesthetics & Objectives</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/designinspo_1.png" alt="design_inspiration1" />
+							<img src="../images/process/filmarchive/designinspo_2.png" alt="design_inspiration2" />
+							<img src="../images/process/filmarchive/designinspo_3.png" alt="design_inspiration3" />
+							<img src="../images/process/filmarchive/designinspo_4.png" alt="design_inspiration4" />
+						</div>
+						<div class="dropP">
+							<p>
+								<em>From my first design brief:</em>
+								<br />
+								<br />
+								My design will be minimal, readable, and accessible while still maintaining a
+								tasteful and purposeful feeling. I will follow brutalist web design aesthetics while
+								incorporating calm, earthy, and less stark color schemes. I hope to emphasize the
+								images on my website and have a sans-serif accompanying font that will pop out
+								without overtaking the images.
+								<br />
+								<br />
+								I&#8217;d like to utilize captions and accompanying text for my images very
+								sparingly. I&#8217;d prefer that the viewer interpret the pictures for themselves
+								without trying to relate it back to certain context that I&#8217;ve given them.
+								<br />
+								<br />
+								It is likely that the images in each gallery will be displayed largely and evenly,
+								with small typography stating basic info like date, concept/collection name,
+								location, camera, film type etc.
+								<br />
+								<br />
+								The biggest feature that I think will make my project unique in comparison to other
+								galleries is that the user will be able to apply filters to the images they are
+								viewing as they please, giving the page a fun and interactive nature as opposed to a
+								passive viewing one.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Iterations</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/filmarchive_proto1.jpg"
+								alt="filmarchive_prototype1" />
+							<img src="../images/process/filmarchive/filmarchive_proto2.jpg"
+								alt="filmarchive_prototype2" />
+							<img src="../images/process/filmarchive/filmarchive_proto3.jpg"
+								alt="filmarchive_prototype3" />
+							<img src="../images/process/filmarchive/filmarchive_proto4.jpg"
+								alt="filmarchive_prototype4" />
+							<img src="../images/process/filmarchive/filmarchive_proto5.jpg"
+								alt="filmarchive_sitedraft1" />
+							<img src="../images/process/filmarchive/filmarchive_proto6.jpg"
+								alt="filmarchive_sitedraft2" />
+							<img src="../images/process/filmarchive/filmarchive_proto7.jpg"
+								alt="filmarchive_sitedraft3" />
+						</div>
+						<div class="dropP">
+							<p>
+								The first iterations of my site came through preliminary designs made in Adobe XD,
+								and a working draft of my site based off these designs to be used in user testing.
+								<br />
+								<br />
+								I designed a homepage displaying circles for “featured collections” &#8211; which
+								could then be clicked to go to the corresponding photoshoot. It was my hope that
+								this would enable immediate user interest and interaction.
+								<br />
+								<br />
+								I designed the individual “collection pages” largely around
+								<b>images</b>
+								#8211; with a scrollable gallery displaying large views of my photography. To
+								fulfill my desire of maximum user control/interaction, I included a “control center”
+								showing key controls for the user to apply filters to the images in the gallery.
+								Also included was a minimal navigation bar and the title of the photoshoot. In my
+								working prototype, I included a "down arrow" below the image slideshow that would
+								display a menu with info about the shoot. The down arrow would be changed to an
+								"info button" to better clarify its purpose and address concerns from user testing.
+								<br />
+								<br />
+								I also designed an archive page, where the user could view every single one of my
+								photos in a large gallery. Finally, I designed the "game" page in a minimal fashion,
+								with the game itself at the center of the page and constantly visible
+								controls/instructions.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Final Changes, Color & Type</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/filmarchive_final1.jpg"
+								alt="filmarchive_shoot_final" />
+							<img src="../images/process/filmarchive/filmarchive_final2.jpg"
+								alt="filmarchive_collections_final" />
+							<img src="../images/process/filmarchive/finalcolor_type.jpg"
+								alt="filmarchive_color&type_vscode" />
+						</div>
+						<div class="dropP">
+							<p>
+								The major final changes for the site came in the info button + dropdown, and a new
+								"collections" page. I styled the dropdown functionality around an interactive "info"
+								button, that brings up a section on info about the shoot and a collage giving an
+								overall representation of the shoot. Upon click, the button changes to an "x" which
+								closes the section.
+								<br />
+								<br />
+								The "collections" page features a menu of all my photoshoots to date [including
+								those not present in the featured shoots on the homepage] that can be scrolled
+								through/cycled using arrow buttons. Next to the menu exists an empty circle, which
+								will be filled in with a preview of each photoshoot when hovering over the
+								corresponding title.
+								<br />
+								<br />
+								I chose a light tan color [#d8d3cd] to convey a warm, welcome feeling without
+								clashing with my photos. I chose "General Sans Light" for my type, as it is a bold,
+								clean sans-serif font that accentuates the web design without overtaking the images
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="mobileFooter">
+						<i id="designMFoot" class="fa-solid fa-x"></i>
+					</div>
+				</section>
+				<div class="footer">
+					<footer>
+						<button id="designFoot">close</button>
+					</footer>
+				</div>
+			</div>
+		</article>
+
+		<article id="info" class="closed">
+			<h1 id="infoToggle">
+				Info
+				<i id="infoArrow" class="fa-solid fa-chevron-right"></i>
+			</h1>
+			<div id="infoDrop" class="dropdown">
+				<section>
+					<div id="infoX" class="xButton">
+						<i class="fa-solid fa-x"></i>
+					</div>
+					<h2>Intention</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/filmarchive/info.jpg" alt="my_filmphoto_from_positano" />
+						</div>
+						<div class="dropP">
+							<p>
+								I created this website to share and collect my film photography, and explore the
+								concept of “interactive art” and
+								<em>active viewing experiences</em>
+								.
+								<br />
+								<br />
+								In my experience viewing art on the computer, the process has seemed passive in a
+								way that viewing art in person does not. At a museum, the viewer is enabled to walk
+								around the piece, viewing it from different angles and lighting &#8211; this creates
+								an active link between the viewer and the art. On the computer, this action is taken
+								away &#8211; a .png or a .jpg is flat and static. Through this website, I enabled
+								the viewer to take action while they view my photos, experimenting with different
+								filters and colors, effectively viewing it at different angles and lighting as one
+								could at a museum.
+								<br />
+								<br />
+								The presence of fun and creative user interaction options is something that has
+								interested me greatly during my web development & design journey, and it has given
+								me an interest in the potential of viewing art and photography on a website [and
+								websites as an artistic medium of their own].
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+			c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="mobileFooter">
+						<i id="infoMFoot" class="fa-solid fa-x"></i>
+					</div>
+				</section>
+				<div class="footer">
+					<footer>
+						<button id="infoFoot">close</button>
+					</footer>
+				</div>
+			</div>
+		</article>
+	</main>
+	<script src="../rehaul.js"></script>
+</body>
+
 </html>

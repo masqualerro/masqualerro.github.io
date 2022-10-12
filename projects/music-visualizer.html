@@ -1,594 +1,491 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Processing Music Visualizer</title>
 
-		<script src="https://kit.fontawesome.com/daafecce72.js" crossorigin="anonymous"></script>
-		<link rel="stylesheet" href="../css/projects.css" />
-	</head>
-	<body>
-		<header>
-			<h1>Processing Music Visualizer</h1>
-			<nav>
-				<a href="../index.html">Home</a>
-				<a href="../about.html">About</a>
-				<a href="https://www.linkedin.com/in/miguel-sedillo/">LinkedIn</a>
-				<a href="https://github.com/masqualerro">GitHub</a>
-				<a
-					href="mailto:&#115;&#101;&#100;&#105;&#108;&#108;&#111;&#109;&#105;&#103;&#117;&#101;&#108;&#046;&#100;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;"
-				>
-					Email
-				</a>
-			</nav>
-			<a class="siteLink" id="musicviz-link" href="https://github.com/masqualerro/music_visualizer_processing">
-				https://github.com/masqualerro/music_visualizer_processing
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Music Visualizer</title>
+
+	<script src="https://kit.fontawesome.com/daafecce72.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../css/projects.css" />
+</head>
+
+<body>
+	<header>
+		<h1>Music Visualizer</h1>
+		<nav>
+			<a href="../index.html">Home</a>
+			<a href="../about.html">About</a>
+			<a href="https://www.linkedin.com/in/miguel-sedillo/">LinkedIn</a>
+			<a href="https://github.com/masqualerro">GitHub</a>
+			<a
+				href="mailto:&#115;&#101;&#100;&#105;&#108;&#108;&#111;&#109;&#105;&#103;&#117;&#101;&#108;&#046;&#100;&#101;&#115;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">
+				Email
 			</a>
-		</header>
-		<main>
-			<article id="process" class="closed">
-				<h1 id="processToggle">
-					Process
-					<i id="processArrow" class="fa-solid fa-chevron-right"></i>
-				</h1>
-				<div id="processDrop" class="dropdown">
-					<section>
-						<div id="processX" class="xButton">
-							<i class="fa-solid fa-x"></i>
-						</div>
-						<h2>Initial Brainstorm</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/musicviz/musicviz_3.jpg"
-									alt="itunes_visualizer_screenshot"
-								/>
-							</div>
-							<div class="dropP">
-								<p>
-									This is my final project for DES 111 at UC Davis, a creative coding class for
-									designers using
-									<a href="https://processing.org/">processing</a>
-									[a graphical library and IDE using the Java language]. The assignment was open ended
-									and I was granted complete creative and conceptual control.
-									<br />
-									<br />
-									My initial brainstorm for this project was inspired by early 2000s iTunes music
-									visualizers. I remember loving to watch the animations on my family computer while I
-									listened to music as a child -- but I always felt frustrated that the visualizers
-									were not connected to the beat of the music.
-									<br />
-									<br />
-									For my project, I resolved to make a customizable music visualizer of my own that
-									would follow the bpm of the song at hand.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Initial UX/UI Design</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/musicviz/musicviz_4.jpg" alt="musicviz_sketchbook_page" />
-								<img src="../images/process/musicviz/musicviz_1.png" alt="musicviz_sketchbook_page2" />
-							</div>
-							<div class="dropP">
-								<p>
-									Before the coding process, I sketched several UI concepts alongside some notes on
-									their accompanying UX features. From the beginning, I felt strongly that the user
-									must have customization control over the visualizer, and the visualizer animation
-									should be directly linked to the bpm of the song, effectively shifting and moving
-									with it.
-									<br />
-									<br />
-									I decided that the visualizer would consist of overlapping transparent shapes with
-									varying stroke colors, attached to different waveforms from the chosen song file.
-									<br />
-									<br />
-									The user would have the option to customize these shapes, and choose either
-									rectangles or ellipses. The user would also be able to choose the stroke color, from
-									various static colors or constantly shifting random colors for a rainbow strobelight
-									effect.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Rough Versions / Development</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/ell1.webm" />
-									<source src="../images/process/musicviz/ell1.mp4" />
-								</video>
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/rect1.webm" />
-									<source src="../images/process/musicviz/rect1.mp4" />
-								</video>
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/musicviz_early.webm" />
-									<source src="../images/process/musicviz/musicviz_early.mp4" />
-								</video>
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/fill1.webm" />
-									<source src="../images/process/musicviz/fill1.mp4" />
-								</video>
-							</div>
-							<div class="dropP">
-								<p>
-									The first version of the project was meant to develop the visualizer animation and
-									functionality, with a rough UI meant to brainstorm color schemes and develop a
-									feeling to work from.
-									<br />
-									<br />
-									I began by stacking several ellipses and tying their dimensions to the left and
-									right channels of the currently playing stereo audio track using the
-									<a href="https://code.compartmental.net/minim/">minim</a>
-									library. Each circle relied in a different manner on the audio channels, creating a
-									fluctuating, versatile, geometric effect. I also added a version of this using
-									rectangles instead of ellipses. For the UI, I decided on a black background, to
-									match early iTunes visualizers.
-									<br />
-									<br />
-									In the next version of my project, I added customization options. I added
-									functionality to switch between “ellipse” and “rectangle” options, and afforded the
-									user basic color (blue, red, yellow) + a rainbow option that would change to a
-									random color on each beat of the song. I also experimented with “fill” and “no-fill”
-									options for the shapes used in the visualizer. The type included in the rough
-									version was meant for my own personal reference during testing and would later be
-									implemented into the final UI.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<h2>Final Product + User Flow</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/finalprod_video.webm" />
-									<source src="../images/process/musicviz/finalprod_video.mp4" />
-								</video>
-								<img src="../images/process/musicviz/finalprod1.png" alt="musicviz_darkmode" />
-								<img src="../images/process/musicviz/finalprod2.png" alt="musicviz_lightmode" />
-								<img src="../images/process/musicviz/finalprod3.png" alt="musicviz_alternatemode" />
-							</div>
-							<div class="dropP">
-								<p>
-									The final product contains a user flow starting at a “homepage” with navigation
-									controls leading to individual “now playing” pages for each song. The “now playing”
-									pages contain customization options for the visualizer, as well as play/pause
-									controls and control to return to the homepage. Also included on the homepage are
-									several color-scheme options for the UI, with a default “dark mode,” “light mode,”
-									and “alternate.”
-									<br />
-									<br />
-									At the top of each “now playing” page exists a bar showing progress through the
-									song, as well as a background animation simulating stars and space, as well as an
-									expanding array of dots following the cursor. The “now playing” pages were designed
-									around a centered visualizer and emphasis on the song name.
-									<br />
-									<br />
-									Click
-									<a href="../images/musicviz_final.mp4">here</a>
-									for a video demo, and
-									<a href="https://github.com/masqualerro/music_visualizer_processing">here</a>
-									to try the app yourself.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="mobileFooter">
-							<i id="processMFoot" class="fa-solid fa-x"></i>
-						</div>
-					</section>
-					<div class="footer">
-						<footer>
-							<button id="processFoot">close</button>
-						</footer>
+		</nav>
+		<a class="siteLink" id="musicviz-link" href="https://github.com/masqualerro/music_visualizer_processing">
+			https://github.com/masqualerro/music_visualizer_processing
+		</a>
+	</header>
+	<main>
+		<article id="process" class="closed">
+			<h1 id="processToggle">
+				Process
+				<i id="processArrow" class="fa-solid fa-chevron-right"></i>
+			</h1>
+			<div id="processDrop" class="dropdown">
+				<section>
+					<div id="processX" class="xButton">
+						<i class="fa-solid fa-x"></i>
 					</div>
+					<h2>Initial Brainstorm</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/musicviz/musicviz_3.jpg" alt="itunes_visualizer_screenshot" />
+						</div>
+						<div class="dropP">
+							<p>
+								This is my final project for DES 111 at UC Davis, a creative coding class for
+								designers using
+								<a href="https://processing.org/">processing</a>
+								[a graphical library and IDE using the Java language]. The assignment was open ended
+								and I was granted complete creative and conceptual control.
+								<br />
+								<br />
+								My initial brainstorm for this project was inspired by early 2000s iTunes music
+								visualizers. I remember loving to watch the animations on my family computer while I
+								listened to music as a child -- but I always felt frustrated that the visualizers
+								were not connected to the beat of the music.
+								<br />
+								<br />
+								For my project, I resolved to make a customizable music visualizer of my own that
+								would follow the bpm of the song at hand.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Initial UX/UI Design</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/musicviz/musicviz_4.jpg" alt="musicviz_sketchbook_page" />
+							<img src="../images/process/musicviz/musicviz_1.png" alt="musicviz_sketchbook_page2" />
+						</div>
+						<div class="dropP">
+							<p>
+								Before the coding process, I sketched several UI concepts alongside some notes on
+								their accompanying UX features. From the beginning, I felt strongly that the user
+								must have customization control over the visualizer, and the visualizer animation
+								should be directly linked to the bpm of the song, effectively shifting and moving
+								with it.
+								<br />
+								<br />
+								I decided that the visualizer would consist of overlapping transparent shapes with
+								varying stroke colors, attached to different waveforms from the chosen song file.
+								<br />
+								<br />
+								The user would have the option to customize these shapes, and choose either
+								rectangles or ellipses. The user would also be able to choose the stroke color, from
+								various static colors or constantly shifting random colors for a rainbow strobelight
+								effect.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Rough Versions / Development</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/ell1.webm" />
+								<source src="../images/process/musicviz/ell1.mp4" />
+							</video>
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/rect1.webm" />
+								<source src="../images/process/musicviz/rect1.mp4" />
+							</video>
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/musicviz_early.webm" />
+								<source src="../images/process/musicviz/musicviz_early.mp4" />
+							</video>
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/fill1.webm" />
+								<source src="../images/process/musicviz/fill1.mp4" />
+							</video>
+						</div>
+						<div class="dropP">
+							<p>
+								The first version of the project was meant to develop the visualizer animation and
+								functionality, with a rough UI meant to brainstorm color schemes and develop a
+								feeling to work from.
+								<br />
+								<br />
+								I began by stacking several ellipses and tying their dimensions to the left and
+								right channels of the currently playing stereo audio track using the
+								<a href="https://code.compartmental.net/minim/">minim</a>
+								library. Each circle relied in a different manner on the audio channels, creating a
+								fluctuating, versatile, geometric effect. I also added a version of this using
+								rectangles instead of ellipses. For the UI, I decided on a black background, to
+								match early iTunes visualizers.
+								<br />
+								<br />
+								In the next version of my project, I added customization options. I added
+								functionality to switch between “ellipse” and “rectangle” options, and afforded the
+								user basic color (blue, red, yellow) + a rainbow option that would change to a
+								random color on each beat of the song. I also experimented with “fill” and “no-fill”
+								options for the shapes used in the visualizer. The type included in the rough
+								version was meant for my own personal reference during testing and would later be
+								implemented into the final UI.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<h2>Final Product + User Flow</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/finalprod_video.webm" />
+								<source src="../images/process/musicviz/finalprod_video.mp4" />
+							</video>
+							<img src="../images/process/musicviz/finalprod1.png" alt="musicviz_darkmode" />
+							<img src="../images/process/musicviz/finalprod2.png" alt="musicviz_lightmode" />
+							<img src="../images/process/musicviz/finalprod3.png" alt="musicviz_alternatemode" />
+						</div>
+						<div class="dropP">
+							<p>
+								The final product contains a user flow starting at a “homepage” with navigation
+								controls leading to individual “now playing” pages for each song. The “now playing”
+								pages contain customization options for the visualizer, as well as play/pause
+								controls and control to return to the homepage. Also included on the homepage are
+								several color-scheme options for the UI, with a default “dark mode,” “light mode,”
+								and “alternate.”
+								<br />
+								<br />
+								At the top of each “now playing” page exists a bar showing progress through the
+								song, as well as a background animation simulating stars and space, as well as an
+								expanding array of dots following the cursor. The “now playing” pages were designed
+								around a centered visualizer and emphasis on the song name.
+								<br />
+								<br />
+								Click
+								<a href="../images/musicviz_final.mp4">here</a>
+								for a video demo, and
+								<a href="https://github.com/masqualerro/music_visualizer_processing">here</a>
+								to try the app yourself.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="mobileFooter">
+						<i id="processMFoot" class="fa-solid fa-x"></i>
+					</div>
+				</section>
+				<div class="footer">
+					<footer>
+						<button id="processFoot">close</button>
+					</footer>
 				</div>
-			</article>
-			<article id="design" class="closed">
-				<h1 id="designToggle">
-					<i id="designArrow" class="fa-solid fa-chevron-left"></i>
-					Design
-				</h1>
-				<div id="designDrop" class="dropdown">
-					<section>
-						<div id="designX" class="xButton">
-							<i class="fa-solid fa-x"></i>
+			</div>
+		</article>
+		<article id="design" class="closed">
+			<h1 id="designToggle">
+				<i id="designArrow" class="fa-solid fa-chevron-left"></i>
+				Design
+			</h1>
+			<div id="designDrop" class="dropdown">
+				<section>
+					<div id="designX" class="xButton">
+						<i class="fa-solid fa-x"></i>
+					</div>
+					<h2>Inspiration</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/musicviz/musicviz_3.jpg" alt="itunes_visualizer_screenshot" />
+							<img src="../images/process/musicviz/inspo3.jpg" alt="messa_di_voce_golan_levin" />
+							<img src="../images/process/musicviz/inspo2.jpg" alt="multimedia_beethoven" />
 						</div>
-						<h2>Inspiration</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img
-									src="../images/process/musicviz/musicviz_3.jpg"
-									alt="itunes_visualizer_screenshot"
-								/>
-								<img src="../images/process/musicviz/inspo3.jpg" alt="messa_di_voce_golan_levin" />
-								<img src="../images/process/musicviz/inspo2.jpg" alt="multimedia_beethoven" />
-							</div>
-							<div class="dropP">
-								<p>
-									My initial brainstorm for this project was inspired by early 2000s iTunes music
-									visualizers. I remember loving to watch the animations on my family computer while I
-									listened to music as a child, but I always felt frustrated that the visualizers were
-									not connected to the beat of the music. I decided to make a customizable music
-									visualizer of my own that would follow the bpm of the song at hand. I resolved to
-									design my visualizer in a similar way to iTunes, where the animation takes up the
-									center of attention and the song&#8217;s metadata is emphasized.
-									<br />
-									<br />
-									Since I would be using Processing for this project, I found further inspiration in
-									<em>Processing: A Programming Handbook for Visual Designers and Artists</em>
-									by Casey Reas. I was inspired by creative coding projects based around audio,
-									including
-									<a href="http://www.flong.com/archive/projects/messa/index.html">Messa di Voce</a>
-									by Golan Levin and
-									<a href="https://youtu.be/Q_BhXEQF8Kk">Multimedia Beethoven: The Ninth Symphony</a>
-									by Robert Winter.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
+						<div class="dropP">
+							<p>
+								My initial brainstorm for this project was inspired by early 2000s iTunes music
+								visualizers. I remember loving to watch the animations on my family computer while I
+								listened to music as a child, but I always felt frustrated that the visualizers were
+								not connected to the beat of the music. I decided to make a customizable music
+								visualizer of my own that would follow the bpm of the song at hand. I resolved to
+								design my visualizer in a similar way to iTunes, where the animation takes up the
+								center of attention and the song&#8217;s metadata is emphasized.
+								<br />
+								<br />
+								Since I would be using Processing for this project, I found further inspiration in
+								<em>Processing: A Programming Handbook for Visual Designers and Artists</em>
+								by Casey Reas. I was inspired by creative coding projects based around audio,
+								including
+								<a href="http://www.flong.com/archive/projects/messa/index.html">Messa di Voce</a>
+								by Golan Levin and
+								<a href="https://youtu.be/Q_BhXEQF8Kk">Multimedia Beethoven: The Ninth Symphony</a>
+								by Robert Winter.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
 							</div>
 						</div>
-						<h2>Aesthetics & Objectives</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<img src="../images/process/musicviz/aesth1.png" alt="itunes_visualizer_screenshot2" />
-								<img
-									src="../images/process/musicviz/aesth2.png"
-									alt="applemusic_miniplayer_screenshot"
-								/>
-							</div>
-							<div class="dropP">
-								<p>
-									From the beginning, I was resolved to design my program as a “music player” &#8211;
-									emphasizing song metadata with a centered music player. This is directly inspired by
-									old iTunes visualizers, as well as new ones &#8211; in modern Apple Music
-									“mini-players” the album art takes up 80% of the display, with the song name, album
-									name, artist, and a progress bar taking the rest. I would include all of these
-									things in my UI, with my visualizer essentially replacing the spot of the album art.
-									<br />
-									<br />
-									I hoped to communicate a vintage feeling similar to old CD-ROM programs with my
-									default UI color scheme, using a black background and blue text.
-								</p>
+					</div>
+					<h2>Aesthetics & Objectives</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<img src="../images/process/musicviz/aesth1.png" alt="itunes_visualizer_screenshot2" />
+							<img src="../images/process/musicviz/aesth2.png" alt="applemusic_miniplayer_screenshot" />
+						</div>
+						<div class="dropP">
+							<p>
+								From the beginning, I was resolved to design my program as a “music player” &#8211;
+								emphasizing song metadata with a centered music player. This is directly inspired by
+								old iTunes visualizers, as well as new ones &#8211; in modern Apple Music
+								“mini-players” the album art takes up 80% of the display, with the song name, album
+								name, artist, and a progress bar taking the rest. I would include all of these
+								things in my UI, with my visualizer essentially replacing the spot of the album art.
+								<br />
+								<br />
+								I hoped to communicate a vintage feeling similar to old CD-ROM programs with my
+								default UI color scheme, using a black background and blue text.
+							</p>
 
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
 							</div>
 						</div>
-						<h2>Iterations</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/ell1.webm" />
-									<source src="../images/process/musicviz/ell1.mp4" />
-								</video>
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/rect1.webm" />
-									<source src="../images/process/musicviz/rect1.mp4" />
-								</video>
+					</div>
+					<h2>Iterations</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/ell1.webm" />
+								<source src="../images/process/musicviz/ell1.mp4" />
+							</video>
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/rect1.webm" />
+								<source src="../images/process/musicviz/rect1.mp4" />
+							</video>
 
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/musicviz_early.webm" />
-									<source src="../images/process/musicviz/musicviz_early.mp4" />
-								</video>
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/fill1.webm" />
-									<source src="../images/process/musicviz/fill1.mp4" />
-								</video>
-							</div>
-							<div class="dropP">
-								<p>
-									The first iteration of the project was meant to develop the visualizer animation and
-									functionality, with a rough UI meant to brainstorm color schemes and type + develop
-									a feeling to work from.
-									<br />
-									<br />
-									I developed a version of the visualizer using ellipses, as well as a version using
-									rectangles. Inline with my initial objectives, I decided on a black background with
-									blue type.
-									<br />
-									<br />
-									The color scheme of my project stayed largely the same through different variations,
-									and the biggest changes lied in the user flow and UI layout.
-									<br />
-									<br />
-									In the second iteration of my project, I added customization options. I added
-									functionality to switch between “ellipse” and “rectangle” options, and afforded the
-									user basic color (blue, red, yellow) + a rainbow option that would change to a
-									random color on each beat of the song. I also experimented with “fill” and “no-fill”
-									options for the shapes used in the visualizer. The type included in this rough
-									version was meant for my own personal reference during testing and would later be
-									implemented into the final UI.
-									<br />
-									<br />
-									The final iteration of my project would be incorporate a user flow centered around a
-									homepage and individual "now-playing" pages for each song, outlined in the next
-									section.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/musicviz_early.webm" />
+								<source src="../images/process/musicviz/musicviz_early.mp4" />
+							</video>
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/fill1.webm" />
+								<source src="../images/process/musicviz/fill1.mp4" />
+							</video>
+						</div>
+						<div class="dropP">
+							<p>
+								The first iteration of the project was meant to develop the visualizer animation and
+								functionality, with a rough UI meant to brainstorm color schemes and type + develop
+								a feeling to work from.
+								<br />
+								<br />
+								I developed a version of the visualizer using ellipses, as well as a version using
+								rectangles. Inline with my initial objectives, I decided on a black background with
+								blue type.
+								<br />
+								<br />
+								The color scheme of my project stayed largely the same through different variations,
+								and the biggest changes lied in the user flow and UI layout.
+								<br />
+								<br />
+								In the second iteration of my project, I added customization options. I added
+								functionality to switch between “ellipse” and “rectangle” options, and afforded the
+								user basic color (blue, red, yellow) + a rainbow option that would change to a
+								random color on each beat of the song. I also experimented with “fill” and “no-fill”
+								options for the shapes used in the visualizer. The type included in this rough
+								version was meant for my own personal reference during testing and would later be
+								implemented into the final UI.
+								<br />
+								<br />
+								The final iteration of my project would be incorporate a user flow centered around a
+								homepage and individual "now-playing" pages for each song, outlined in the next
+								section.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
 							</div>
 						</div>
-						<h2>Final User Flow + Design</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/finalprod_video.webm" />
-									<source src="../images/process/musicviz/finalprod_video.mp4" />
-								</video>
-								<img src="../images/process/musicviz/finalprod1.png" alt="musicviz_darkmode" />
-								<img src="../images/process/musicviz/finalprod2.png" alt="musicviz_lightmode" />
-								<img src="../images/process/musicviz/finalprod3.png" alt="musicviz_alternatemode" />
-							</div>
-							<div class="dropP">
-								<p>
-									The final product contains a user flow starting at a “homepage” with navigation
-									controls leading to individual “now playing” pages for each song. The “now playing”
-									pages contain customization options for the visualizer, as well as play/pause
-									controls and control to return to the homepage. Also included on the homepage are
-									several color-scheme options for the UI, with a default “dark mode,” “light mode,”
-									and “alternate.”
-									<br />
-									<br />
-									At the top of each “now playing” page exists a bar showing progress through the
-									song, as well as a background animation simulating stars and space, as well as an
-									expanding array of dots following the cursor. The “now playing” pages were designed
-									around a centered visualizer and emphasis on the song name.
-									<br />
-									<br />
-									Click
-									<a href="../images/musicviz_final.mp4">here</a>
-									for a video demo, and
-									<a href="https://github.com/masqualerro/music_visualizer_processing">here</a>
-									to try the app yourself.
-								</p>
-								<div class="svg">
-									<svg
-										version="1.1"
-										xmlns="http://www.w3.org/2000/svg"
-										xmlns:xlink="http://www.w3.org/1999/xlink"
-										x="0px"
-										y="0px"
-										viewBox="0 0 10.58 12.15"
-										style="enable-background: new 0 0 10.58 12.15"
-										xml:space="preserve"
-									>
-										<g>
-											<path
-												fill="white"
-												stroke="black"
-												stroke-width="1%"
-												d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
-				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z"
-											/>
-										</g>
-									</svg>
-								</div>
-							</div>
-						</div>
-						<div class="mobileFooter">
-							<i id="designMFoot" class="fa-solid fa-x"></i>
-						</div>
-					</section>
-					<div class="footer">
-						<footer>
-							<button id="designFoot">close</button>
-						</footer>
 					</div>
-				</div>
-			</article>
-			<article id="info" class="closed">
-				<h1 id="infoToggle">
-					Info
-					<i id="infoArrow" class="fa-solid fa-chevron-right"></i>
-				</h1>
-				<div id="infoDrop" class="dropdown">
-					<section>
-						<div id="infoX" class="xButton">
-							<i class="fa-solid fa-x"></i>
+					<h2>Final User Flow + Design</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/finalprod_video.webm" />
+								<source src="../images/process/musicviz/finalprod_video.mp4" />
+							</video>
+							<img src="../images/process/musicviz/finalprod1.png" alt="musicviz_darkmode" />
+							<img src="../images/process/musicviz/finalprod2.png" alt="musicviz_lightmode" />
+							<img src="../images/process/musicviz/finalprod3.png" alt="musicviz_alternatemode" />
 						</div>
-						<h2>Intention</h2>
-						<div class="dropSection">
-							<div class="dropImg">
-								<video autoplay loop muted playsinline>
-									<source src="../images/process/musicviz/finalprod_video.webm" />
-									<source src="../images/process/musicviz/finalprod_video.mp4" />
-								</video>
-							</div>
-							<div class="dropP">
-								<p>
-									This app was made through the desire to create a music visualizer that followed the
-									beat of the music, inspired by a childhood frustration that early iTunes music
-									visualizers were randomly generated with no relation to the song at hand.
-									<br />
-									<br />
-									The music player and visualizer was written in Processing using the Minim library.
-									The app generates rectangular or ellipse patterns based on the waveform + bpm of the
-									chosen song. The user can customize the stroke color and desired shape of the
-									visualizer pattern. The user has the option to cycle between 5 different songs.
-									<br />
-									<br />
-									USER CONTROLS: ** also outlined in app **
-									<br />
-									<br />
-									1-5 keys cycle between 5 different song options (each key corresponds to a different
-									song)
-									<br />
-									<br />
-									a-e keys control play functionality for each song -- a will play "1", b will play
-									"2" etc.
-									<br />
-									<br />
-									"u" key selects ellipse visualizer -- "v" key selects rectangular visualizer
-									<br />
-									<br />
-									w-z keys cycle through various stroke color options
-									<br />
-									<br />
-									SPACE key will stop playback.
-								</p>
+						<div class="dropP">
+							<p>
+								The final product contains a user flow starting at a “homepage” with navigation
+								controls leading to individual “now playing” pages for each song. The “now playing”
+								pages contain customization options for the visualizer, as well as play/pause
+								controls and control to return to the homepage. Also included on the homepage are
+								several color-scheme options for the UI, with a default “dark mode,” “light mode,”
+								and “alternate.”
+								<br />
+								<br />
+								At the top of each “now playing” page exists a bar showing progress through the
+								song, as well as a background animation simulating stars and space, as well as an
+								expanding array of dots following the cursor. The “now playing” pages were designed
+								around a centered visualizer and emphasis on the song name.
+								<br />
+								<br />
+								Click
+								<a href="../images/musicviz_final.mp4">here</a>
+								for a video demo, and
+								<a href="https://github.com/masqualerro/music_visualizer_processing">here</a>
+								to try the app yourself.
+							</p>
+							<div class="svg">
+								<svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+									xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.58 12.15"
+									style="enable-background: new 0 0 10.58 12.15" xml:space="preserve">
+									<g>
+										<path fill="white" stroke="black" stroke-width="1%" d="M5.16,12.15C5.09,7.96,3.37,6.31,0,6.21V5.94C3.37,5.84,5.09,4.19,5.16,0h0.27c0.07,4.19,1.79,5.88,5.16,5.94v0.27
+				c-3.37,0.07-5.09,1.75-5.16,5.94H5.16z" />
+									</g>
+								</svg>
 							</div>
 						</div>
-						<div class="mobileFooter">
-							<i id="infoMFoot" class="fa-solid fa-x"></i>
-						</div>
-					</section>
-					<div class="footer">
-						<footer>
-							<button id="infoFoot">close</button>
-						</footer>
 					</div>
+					<div class="mobileFooter">
+						<i id="designMFoot" class="fa-solid fa-x"></i>
+					</div>
+				</section>
+				<div class="footer">
+					<footer>
+						<button id="designFoot">close</button>
+					</footer>
 				</div>
-			</article>
-		</main>
-		<script src="../rehaul.js"></script>
-	</body>
+			</div>
+		</article>
+		<article id="info" class="closed">
+			<h1 id="infoToggle">
+				Info
+				<i id="infoArrow" class="fa-solid fa-chevron-right"></i>
+			</h1>
+			<div id="infoDrop" class="dropdown">
+				<section>
+					<div id="infoX" class="xButton">
+						<i class="fa-solid fa-x"></i>
+					</div>
+					<h2>Intention</h2>
+					<div class="dropSection">
+						<div class="dropImg">
+							<video autoplay loop muted playsinline>
+								<source src="../images/process/musicviz/finalprod_video.webm" />
+								<source src="../images/process/musicviz/finalprod_video.mp4" />
+							</video>
+						</div>
+						<div class="dropP">
+							<p>
+								This app was made through the desire to create a music visualizer that followed the
+								beat of the music, inspired by a childhood frustration that early iTunes music
+								visualizers were randomly generated with no relation to the song at hand.
+								<br />
+								<br />
+								The music player and visualizer was written in Processing using the Minim library.
+								The app generates rectangular or ellipse patterns based on the waveform + bpm of the
+								chosen song. The user can customize the stroke color and desired shape of the
+								visualizer pattern. The user has the option to cycle between 5 different songs.
+								<br />
+								<br />
+								USER CONTROLS: ** also outlined in app **
+								<br />
+								<br />
+								1-5 keys cycle between 5 different song options (each key corresponds to a different
+								song)
+								<br />
+								<br />
+								a-e keys control play functionality for each song -- a will play "1", b will play
+								"2" etc.
+								<br />
+								<br />
+								"u" key selects ellipse visualizer -- "v" key selects rectangular visualizer
+								<br />
+								<br />
+								w-z keys cycle through various stroke color options
+								<br />
+								<br />
+								SPACE key will stop playback.
+							</p>
+						</div>
+					</div>
+					<div class="mobileFooter">
+						<i id="infoMFoot" class="fa-solid fa-x"></i>
+					</div>
+				</section>
+				<div class="footer">
+					<footer>
+						<button id="infoFoot">close</button>
+					</footer>
+				</div>
+			</div>
+		</article>
+	</main>
+	<script src="../rehaul.js"></script>
+</body>
+
 </html>

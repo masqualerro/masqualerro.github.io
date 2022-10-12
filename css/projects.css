@@ -121,11 +121,8 @@ article h1 {
 	font-size: 5em;
 	font-weight: 300;
 	transition: 0.5s ease all;
-	/* border: 1px solid blue; */
 	padding: 10px;
 	margin: 0;
-	/* background: white; */
-	/* border: 1px solid blue; */
 }
 
 main article > h1:hover {
@@ -155,10 +152,6 @@ main article > h1:hover {
 #designDrop {
 	right: 0;
 }
-/* 
-#designDrop .dropP {
-	transform: translateY(-128px);
-} */
 
 .dropdown a:hover {
 	color: #f241c3;
@@ -200,6 +193,7 @@ i {
 	margin-bottom: 10px;
 	font-weight: 300;
 }
+
 .dropdown h2:first-child {
 	margin-top: 0;
 }
@@ -235,6 +229,7 @@ i {
 }
 
 .dropP {
+	position: -webkit-sticky;
 	position: sticky;
 	top: -100px;
 }
@@ -251,13 +246,9 @@ i {
 
 .dropSection p {
 	margin: 10px;
-	/* border: 1px solid red; */
 	font-size: 0.8em;
 	padding-left: 10px;
-	/* border: 1px solid red; */
 	margin-right: 2em;
-	/* position: sticky;
-	top: 0px; */
 }
 .dropSection p:first-child {
 	margin-top: 0;
@@ -392,18 +383,25 @@ section {
 		display: none;
 	}
 
+	.xButton {
+		display: none;
+	}
+
+	section {
+		height: 100%;
+	}
+
 	.mobileFooter {
-		display: inherit;
+		display: flex;
+		/* padding: -16px; */
+		justify-content: center;
+		padding-bottom: 1em;
 		/* border: 1px solid red; */
-		text-align: center;
-		margin-top: -3em;
 	}
 
 	.mobileFooter button {
-		padding: 0.5em;
-		font-size: 1.5em;
-		/* border: 1px solid black;
-		border-radius: 50%; */
+		padding: 0;
+		/* font-size: 1em; */
 	}
 
 	.mobileFooter button:hover {
@@ -419,20 +417,27 @@ section {
 		align-self: auto;
 		height: auto;
 	}
+
 	.dropSection p {
 		margin: 0px;
-		/* border: 1px solid red; */
 		font-size: 0.8em;
 		padding-left: 0px;
-		/* position: sticky;
-		top: 0px; */
+		margin-right: 2em;
+		padding-right: 30px;
 	}
+
+	/* .dropSection p {
+		margin: 10px;
+		font-size: 0.8em;
+		margin-right: 2em;
+	} */
+
 	.dropSection ul,
 	.dropSection ol {
-		/* border: 1px solid red; */
 		font-size: 0.8em;
 		margin: 10px 0px 10px 0px;
 	}
+
 	.dropdown {
 		position: initial;
 		border: none;
@@ -440,13 +445,12 @@ section {
 		opacity: 0;
 		padding: 1em;
 		display: none;
-		/* width: auto; */
-		width: 80%;
 		margin: auto;
-		padding-top: 2em;
+		/* padding-top: 2em; */
 		margin-top: -128px;
-		/* border: 1px solid pink; */
+		border: 1px solid black;
 	}
+
 	.dropImg {
 		/* border: 1px solid blue; */
 		flex: 1;
@@ -476,10 +480,4 @@ section {
 	#musicviz-link {
 		font-size: 0.8em;
 	}
-
-	/* #process h1,
-	#design h1,
-	#info h1 {
-		text-align: center;
-	} */
 }
