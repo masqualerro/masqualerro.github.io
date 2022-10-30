@@ -63,7 +63,7 @@
 		} else if (process.className == 'open') {
 			if (window.innerWidth <= 450) {
 				process.className = 'closed';
-				document.getElementById('processArrow').style.transform = 'rotate(45deg)';
+				document.getElementById('processArrow').style.transform = 'rotate(0deg)';
 				processDrop.style.opacity = '0';
 				processDrop.style.marginTop = '-128px';
 				design.style.display = `initial`;
@@ -75,7 +75,7 @@
 				}, 500);
 			} else {
 				process.className = 'closed';
-				document.getElementById('processArrow').style.transform = 'rotate(45deg)';
+				document.getElementById('processArrow').style.transform = 'rotate(0deg)';
 				processDrop.style.opacity = '0';
 				processDrop.style.transform = 'translateY(0px)';
 				design.style.display = `initial`;
@@ -120,7 +120,7 @@
 		} else if (design.className == 'open') {
 			if (window.innerWidth <= 450) {
 				design.className = 'closed';
-				document.getElementById('designArrow').style.transform = 'rotate(-45deg)';
+				document.getElementById('designArrow').style.transform = 'rotate(0deg)';
 				designDrop.style.opacity = '0';
 				designDrop.style.marginTop = '-128px';
 				process.style.display = `initial`;
@@ -132,7 +132,7 @@
 				}, 500);
 			} else {
 				design.className = 'closed';
-				document.getElementById('designArrow').style.transform = 'rotate(-45deg)';
+				document.getElementById('designArrow').style.transform = 'rotate(0deg)';
 				designDrop.style.opacity = '0';
 				designDrop.style.transform = 'translateY(0px)';
 				process.style.display = `initial`;
@@ -178,7 +178,7 @@
 		} else if (info.className == 'open') {
 			if (window.innerWidth <= 450) {
 				info.className = 'closed';
-				document.getElementById('infoArrow').style.transform = 'rotate(45deg)';
+				document.getElementById('infoArrow').style.transform = 'rotate(0deg)';
 				infoDrop.style.opacity = '0';
 				infoDrop.style.marginTop = '-128px';
 				setTimeout(function () {
@@ -192,7 +192,7 @@
 				}, 600);
 			} else {
 				info.className = 'closed';
-				document.getElementById('infoArrow').style.transform = 'rotate(45deg)';
+				document.getElementById('infoArrow').style.transform = 'rotate(0deg)';
 				infoDrop.style.opacity = '0';
 				infoDrop.style.transform = 'translateY(0px)';
 
@@ -212,7 +212,7 @@
 	// SECTION CLOSE OPTIONS -- X BUTTON AND FOOTERS FOR DESKTOP AND MOBILE
 	processFooter.addEventListener('click', function () {
 		process.className = 'closed';
-		document.getElementById('processArrow').style.transform = 'rotate(45deg)';
+		document.getElementById('processArrow').style.transform = 'rotate(0deg)';
 		processDrop.style.opacity = '0';
 		processDrop.style.transform = 'translateY(0px)';
 		design.style.display = `initial`;
@@ -229,7 +229,7 @@
 	});
 	processMFooter.addEventListener('click', function () {
 		process.className = 'closed';
-		document.getElementById('processArrow').style.transform = 'rotate(45deg)';
+		document.getElementById('processArrow').style.transform = 'rotate(0deg)';
 		processDrop.style.opacity = '0';
 		processDrop.style.transform = 'translateY(0px)';
 		design.style.display = `initial`;
@@ -246,7 +246,7 @@
 	});
 	processX.addEventListener('click', function () {
 		process.className = 'closed';
-		document.getElementById('processArrow').style.transform = 'rotate(45deg)';
+		document.getElementById('processArrow').style.transform = 'rotate(0deg)';
 		processDrop.style.opacity = '0';
 		processDrop.style.transform = 'translateY(0px)';
 		design.style.display = `initial`;
@@ -263,7 +263,7 @@
 	});
 	designFooter.addEventListener('click', function () {
 		design.className = 'closed';
-		document.getElementById('designArrow').style.transform = 'rotate(-45deg)';
+		document.getElementById('designArrow').style.transform = 'rotate(0deg)';
 		designDrop.style.opacity = '0';
 		designDrop.style.transform = 'translateY(0px)';
 		process.style.display = `initial`;
@@ -277,7 +277,7 @@
 	});
 	designMFooter.addEventListener('click', function () {
 		design.className = 'closed';
-		document.getElementById('designArrow').style.transform = 'rotate(-45deg)';
+		document.getElementById('designArrow').style.transform = 'rotate(0deg)';
 		designDrop.style.opacity = '0';
 		designDrop.style.transform = 'translateY(0px)';
 		process.style.display = `initial`;
@@ -291,7 +291,7 @@
 	});
 	designX.addEventListener('click', function () {
 		design.className = 'closed';
-		document.getElementById('designArrow').style.transform = 'rotate(-45deg)';
+		document.getElementById('designArrow').style.transform = 'rotate(0deg)';
 		designDrop.style.opacity = '0';
 		designDrop.style.transform = 'translateY(0px)';
 		process.style.display = `initial`;
@@ -305,7 +305,7 @@
 	});
 	infoFooter.addEventListener('click', function () {
 		info.className = 'closed';
-		document.getElementById('infoArrow').style.transform = 'rotate(45deg)';
+		document.getElementById('infoArrow').style.transform = 'rotate(0deg)';
 		infoDrop.style.opacity = '0';
 		infoDrop.style.transform = 'translateY(0px)';
 
@@ -321,7 +321,7 @@
 	});
 	infoMFooter.addEventListener('click', function () {
 		info.className = 'closed';
-		document.getElementById('infoArrow').style.transform = 'rotate(45deg)';
+		document.getElementById('infoArrow').style.transform = 'rotate(0deg)';
 		infoDrop.style.opacity = '0';
 		infoDrop.style.transform = 'translateY(0px)';
 
@@ -337,7 +337,7 @@
 	});
 	infoX.addEventListener('click', function () {
 		info.className = 'closed';
-		document.getElementById('infoArrow').style.transform = 'rotate(45deg)';
+		document.getElementById('infoArrow').style.transform = 'rotate(0deg)';
 		infoDrop.style.opacity = '0';
 		infoDrop.style.transform = 'translateY(0px)';
 
