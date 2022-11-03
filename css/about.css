@@ -9,13 +9,26 @@ body {
 }
 
 /* ------HEADER------ */
-
 header {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	/* border: 1px solid red; */
+}
+
+header h1 {
+	font-size: 2.5em;
+	text-align: center;
+	margin: 0;
+	/* border: 1px solid blue; */
+	padding: 0;
+}
+
+header h2 {
+	margin: 0;
+	text-align: center;
+	font-size: 1em;
+	font-family: 'Satoshi-Bold', sans-serif;
 }
 
 header img {
@@ -41,35 +54,20 @@ nav a:hover {
 	transform: translateY(0.1em);
 }
 
-header h1 {
-	font-size: 2.5em;
-	text-align: center;
-	margin: 0;
-	/* border: 1px solid blue; */
-	padding: 0;
-}
-
-header h2 {
-	margin: 0;
-	text-align: center;
-	font-size: 1em;
-	font-family: 'Satoshi-Bold', sans-serif;
-}
-
 /* ------ARTICLE------ */
-
 article {
 	display: flex;
 	flex-direction: column;
 	margin-top: 10px;
 	padding: 10px;
+	border: 1px solid black;
 }
+
 p {
 	font-size: 0.8em;
 }
 
 /* ------ABOUT PAGE------ */
-
 #aboutMain {
 	display: flex;
 	align-items: center;
@@ -92,9 +90,7 @@ p {
 	max-width: 360px;
 }
 
-@media screen and (min-width: 700px) {
-}
-
+/* -----MEDIA QUERIES----- */
 @media screen and (min-width: 850px) {
 	#body {
 		display: flex;
@@ -104,12 +100,7 @@ p {
 		flex: 3.25;
 	}
 
-	article {
-		border: 1px solid black;
-	}
-
 	/* ------HEADER------ */
-
 	header {
 		border-right: none;
 		flex: 1;
@@ -117,6 +108,24 @@ p {
 		justify-content: space-between;
 		align-items: flex-start;
 		padding: 10px 10px 10px 10px;
+	}
+
+	header img {
+		display: initial;
+		width: 80%;
+		align-self: center;
+		margin-top: -4em;
+		margin-left: -0.5em;
+	}
+	header h1 {
+		font-size: 2.2em;
+		padding-bottom: 0.2em;
+		font-style: italic;
+		text-align: left;
+	}
+
+	header h2 {
+		text-align: left;
 	}
 
 	#sticky {
@@ -135,29 +144,10 @@ p {
 		flex-grow: 1;
 	}
 
-	header img {
-		display: initial;
-		width: 80%;
-		align-self: center;
-		margin-top: -4em;
-		margin-left: -0.5em;
-	}
-
 	.fa-arrow-down {
 		display: block;
 		margin-top: 0.5em;
 		font-size: 2em;
-	}
-
-	header h1 {
-		font-size: 2.2em;
-		padding-bottom: 0.2em;
-		font-style: italic;
-		text-align: left;
-	}
-
-	header h2 {
-		text-align: left;
 	}
 
 	nav {

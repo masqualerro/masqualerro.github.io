@@ -22,14 +22,14 @@ header {
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-evenly;
-	/* border: 1px solid red; */
 }
+
 nav {
 	display: flex;
-	/* border: 1px solid red; */
 	text-align: center;
 	justify-content: space-around;
 }
+
 nav a {
 	padding: 8px;
 	text-decoration: none;
@@ -110,10 +110,8 @@ nav a:hover {
 
 article {
 	padding-top: 0;
-	/* border: 1px solid red; */
 	margin: 0;
 	padding: 0;
-	/* border: 1px solid red; */
 	margin-top: 10px;
 }
 
@@ -145,7 +143,6 @@ main article > h1:hover {
 	opacity: 0;
 	padding: 1em;
 	display: flex;
-	/* width: auto; */
 	width: 80%;
 }
 
@@ -161,7 +158,6 @@ main article > h1:hover {
 #designDrop,
 #infoDrop {
 	transition: 0.5s ease all;
-	/* display: flex; */
 }
 
 #design h1 {
@@ -188,7 +184,6 @@ i {
 
 .dropdown h2 {
 	font-size: 25px;
-	/* border: 1px solid red; */
 	margin-top: 10px;
 	margin-bottom: 10px;
 	font-weight: 300;
@@ -207,9 +202,7 @@ i {
 }
 
 .dropImg {
-	/* border: 1px solid blue; */
 	flex: 1.25;
-	/* height: inherit; */
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -220,7 +213,6 @@ i {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
-	/* border: 1px solid green; */
 	justify-content: left;
 	padding-left: 10px;
 	align-self: flex-start;
@@ -241,7 +233,6 @@ i {
 	object-fit: contain;
 	max-height: 500px;
 	padding-bottom: 10px;
-	/* border: 1px solid blue; */
 }
 
 .dropSection p {
@@ -256,7 +247,6 @@ i {
 
 .dropSection ul,
 .dropSection ol {
-	/* border: 1px solid red; */
 	font-size: 0.8em;
 	margin: 10px;
 }
@@ -278,18 +268,13 @@ ol li {
 svg {
 	width: 3em;
 	transition: 0.5s ease all;
-	/* border: 1px solid red; */
 	padding: 5px;
 }
 
-/* svg:hover {
-	transform: rotateY(-180deg);
-} */
 .svg {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	/* border: 1px solid blue; */
 	margin: 0 10px 0 10px;
 	height: 100%;
 }
@@ -334,7 +319,6 @@ footer button:hover,
 	background: #f241c3;
 	border: none;
 	color: white;
-	/* background-position: 100px; */
 	box-shadow: 0px 0px 0px black;
 	border: 2px solid transparent;
 	transform: scale(1.05);
@@ -367,9 +351,6 @@ footer button:hover,
 
 section {
 	height: 100%;
-	/* border: 1px solid red; */
-	/* align-self: flex-start;
-	display: initial; */
 }
 
 @media screen and (min-width: 800px) {
@@ -393,15 +374,12 @@ section {
 
 	.mobileFooter {
 		display: flex;
-		/* padding: -16px; */
 		justify-content: center;
 		padding-bottom: 1em;
-		/* border: 1px solid red; */
 	}
 
 	.mobileFooter button {
 		padding: 0;
-		/* font-size: 1em; */
 	}
 
 	.mobileFooter button:hover {
@@ -426,12 +404,6 @@ section {
 		padding-right: 30px;
 	}
 
-	/* .dropSection p {
-		margin: 10px;
-		font-size: 0.8em;
-		margin-right: 2em;
-	} */
-
 	.dropSection ul,
 	.dropSection ol {
 		font-size: 0.8em;
@@ -446,15 +418,12 @@ section {
 		padding: 1em;
 		display: none;
 		margin: auto;
-		/* padding-top: 2em; */
 		margin-top: -128px;
 		border: 1px solid black;
 	}
 
 	.dropImg {
-		/* border: 1px solid blue; */
 		flex: 1;
-		/* height: inherit; */
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -465,13 +434,11 @@ section {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-		/* border: 1px solid green; */
 		justify-content: inherit;
 		padding-left: 0px;
 		align-self: auto;
 		top: 0;
 		height: auto;
-		/* border: 1px solid green; */
 		padding: 0;
 		margin: 0;
 		width: 100%;
